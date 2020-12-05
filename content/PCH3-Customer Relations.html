@@ -1,0 +1,356 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>cp2020bg4</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cp2020bg4</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='組員名單bg4.html'>組員名單bg4</a><li><a href='進度表.html'>進度表</a><li class='has-children'><a href='HomeWork1.html'>HomeWork1</a><ul class='dropdown'><li><a href='40723217 UNIT 1~2 Page 1~12.html'>40723217 UNIT 1~2 Page 1~12</a><li><a href='40728238 UNIT 2      Page 13~24.html'>40728238 UNIT 2      Page 13~24</a><li class='has-children'><a href='40923206 UNIT 2      Page 25~36.html'>40923206 UNIT 2      Page 25~36</a><ul class='dropdown'><li><a href='PCH2-Procedures and Safety.html'>PCH2-Procedures and Safety</a><li><a href='PCH3-Customer Relations.html'>PCH3-Customer Relations</a></li></ul><li><a href='40923216 UNIT 3      Page 37~48.html'>40923216 UNIT 3      Page 37~48</a><li><a href='40923220 UNIT 3      Page 49~60.html'>40923220 UNIT 3      Page 49~60</a><li><a href='40923227 UNIT 3      Page 61~72.html'>40923227 UNIT 3      Page 61~72</a><li><a href='40923233 UNIT 3~4 Page 73~84.html'>40923233 UNIT 3~4 Page 73~84</a><li><a href='40923237 UNIT 4      Page 85~96.html'>40923237 UNIT 4      Page 85~96</a><li><a href='40923243 UNIT 4      Page 97~108.html'>40923243 UNIT 4      Page 97~108</a><li class='has-children'><a href='40923252 UNIT 4      Page 109~120.html'>40923252 UNIT 4      Page 109~120</a><ul class='dropdown'><li><a href='PCH14-TCP and UDP Protocols.html'>PCH14-TCP and UDP Protocols</a><li><a href='PCH15-Introduction to Wireless Networking.html'>PCH15-Introduction to Wireless Networking</a><li><a href='PCH16-Internet Connectivity.html'>PCH16-Internet Connectivity</a></li></ul><li><a href='40923253 UNIT 5      Page 121~132.html'>40923253 UNIT 5      Page 121~132</a></li></ul><li><a href='HomeWork2.html'>HomeWork2</a><li><a href='HomeWork3.html'>HomeWork3</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">PCH2-Procedures and Safety << <a href='PCH2-Procedures and Safety.html'>Previous</a> <a href='40923216 UNIT 3      Page 37~48.html'>Next</a> >> 40923216 UNIT 3      Page 37~48<br /><h1>PCH3-Customer Relations</h1>
+<p><strong><span style="color: #ff6600;">PCH 3/客戶關係</span></strong></p>
+<p><span style="color: #0000ff;">p28</span></p>
+<p><span style="color: #0000ff;"><span style="color: #000000;">*<span>Recognize and explain the general principles of professional customer service.<br/><span> <span> </span></span></span></span></span><span style="color: #0000ff;"><span style="color: #000000;">認識並解釋專業客戶服務的一般原則。</span></span></p>
+<p><span style="color: #0000ff;"><span style="color: #000000;">*<span>Set up a computer system and demonstrate operation for the customer.<br/><span> <span> </span></span></span></span></span><span style="color: #0000ff;"><span style="color: #000000;">設置計算機系統並為客戶演示操作。</span></span></p>
+<p><span style="color: #0000ff;">p29</span></p>
+<p><strong><span style="color: #000000;">Overview</span></strong></p>
+<p><span style="color: #ff6600;">總覽</span></p>
+<p><span style="color: #000000;">  In this lesson we will be discussing the standards of professional business conversations and the basics of customer service. We will discuss the importance of avoiding distractions and the best practices in customer service and communication.<br/><span> <span> </span></span></span><span lang="zh-TW">在本課程中，我們將討論專業商務對話的標準和客戶服務的基礎。我們將討論避免分心的重要性以及客戶服務和溝通中的最佳做法。</span></p>
+<p class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW">  Content has been derived from the<span> </span><span style="text-decoration: underline;"><span style="color: #0000ff; text-decoration: underline;">STEM Readiness course</span></span><span> </span>by the National STEM Consortium under a CC-BY license.<br/><span> <span> </span></span></span><span lang="zh-TW">內容是根據CC-BY許可從國家STEM聯盟的STEM準備課程中獲得的。</span></p>
+<p class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW" style="color: #0000ff;">P30</span></p>
+<p class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><strong><span lang="zh-TW" style="color: #000000;">Operational Procedures: Communication Methods and Professional</span></strong></p>
+<p class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW" style="color: #000000;"><span style="color: #ff6600;">操作程序：交流方法和專業人員</span></span></p>
+<p class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW" style="color: #000000;">*<span>Recognize and explain the general principles of professional customer service.<br/><span> <span> </span></span></span></span><span lang="zh-TW" style="color: #000000;"><span>認識並解釋專業客戶服務的一般原則。</span></span></p>
+<p class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr">  The first thing we need to realize is that working in the information technology (IT) field is working in a customer service field. The IT field is unique in its own way, but it’s driven by customer service. While the standards of professional business conversations generally apply, there is also the unique aspect of the technician possessing “special knowledge” that a more senior professional may not possess. For example, a person whose computer you are there to fix may be a senior manager at your company, but they may have no idea about how to fix computers. You must, then, remain calm and measured in responding to the client’s needs, yet remain authoritative in your body of knowledge and procedures. This can be difficult for new technicians. Remember, always be kind and patient: the client needs your help!<br/><span> <span> 我們需要意識到的第一件事是，在信息技術（IT）領域中的工作正在在客戶服務領域中。 IT領域以其自己的方式是獨特的，但它是由客戶服務驅動的。雖然通常使用專業商務對話的標準，但是技術人員具有<span>“高級專業知識”所不具備的</span><span>獨特之處，而高級專業人士可能不具備。例如，您要修理計算機的人可能是您公司的高級經理，但他們可能不知道如何修理計算機。然後，您必須保持冷靜並在回應客戶需求時保持冷靜，並在您的知識和程序中保持權威。對於新技術人員而言，這可能很困難。記住，永遠要仁慈和耐心：客戶需要您的幫助！</span></span></span></p>
+<p class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW"><img alt="" height="334" src="./../images/messageImage_1603277112835.jpg" width="558"/></span></p>
+<p class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW"><span>  Photo used under CC-BY-SA license from </span><a href="https://flic.kr/p/5LqyNr" id="_i_1" lang="" target="_blank">Manchester</a><a href="https://flic.kr/p/5LqyNr" id="_i_2" lang="" target="_blank">City Library</a><span>.<br/><span> <span> 照片由曼徹斯特市圖書館根據CC-BY-SA許可使用。</span></span></span></span></p>
+<p class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><strong><span lang="zh-TW">Customer Service Key Principles </span><span style="color: #ff6600;">客戶服務關鍵原則</span></strong></p>
+<p class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr">  Employers have indicated that there are several key principles to follow when handling customers to ensure that you are providing a positive customer service experience.<br/>  雇主表示，在處理客戶時要遵循幾個關鍵原則，以確保您提供積極的客戶服務體驗。</p>
+<p lang="">  Truly exceptional customer service involves surprising and delighting the customer by exceeding his or her expectations. Good customer service includes the following key elements:<br/><span> <span> </span></span>真正出色的客戶服務涉及超出客戶期望的驚喜和喜悅。良好的客戶服務包括以下關鍵要素：</p>
+<ul lang="">
+<li lang="">Effective listening. <span> </span><span style="color: #ff6600;">有效聆聽</span>。</li>
+<li lang="">Taking ownership of the situation. <span> </span><span style="color: #ff6600;">掌握情況</span>。</li>
+<li lang="">Apologizing when appropriate. <span> </span><span style="color: #ff6600;">適當的時候道歉</span>。</li>
+<li lang="">Remaining courteous and professional in all situations. <span> </span><span style="color: #ff6600;">在任何情況下都保持禮貌和專業</span>。</li>
+<li lang="">Handling situations in a timely manner. <span> </span><span style="color: #ff6600;">及時處理情況</span>。</li>
+<li lang="">Ensuring customers’ issues are resolved. <span> </span><span style="color: #ff6600;">確保解決客戶的問題</span>。</li>
+<li lang="">Checking back with customers to ensure the problem was resolved to their satisfaction. <span> </span><span style="color: #ff6600;">與客戶核對，以確保問題得到滿意的解決</span>。</li>
+</ul>
+<p><span>  As a technician, depending on where you work, you will find that sometimes your customers are your company’s clients, and sometimes your customers are other employees at the company you work for. Whether they work for the same company that you do, are clients for your company, or are private individuals relying on your company, the same principles of customer service apply.<br/><span> <span> </span></span></span><span lang="zh-TW">作為技術人員，根據您的工作地點，您會發現有時您的客戶是您公司的客戶，有時您的客戶是您所在公司的其他員工。無論他們與您在同一家公司工作，是您公司的客戶，還是依靠您公司的私人人士，都適用相同的客戶服務原則。</span></p>
+<p><span lang="zh-TW" style="color: #3366ff;">p31</span></p>
+<p><strong>Effective Listening</strong></p>
+<p><span style="color: #ff6600;">有效聆聽</span></p>
+<p><span style="color: #000000;">*<span>Recognize and explain the general principles of professional customer service.</span></span></p>
+<p><span style="color: #000000;"><span>認識並解釋專業客戶服務的一般原則。</span></span></p>
+<p><span style="color: #000000;"><span>  This principle is one of the most important elements in the ability of an employee to deliver outstanding customer service. Effective listening involves paying careful attention to what the customer is saying and watching the customer’s body language (if the encounter is in person) to detect the nonverbal cues that give clues as to what the customer is thinking and feeling.<br/><span> <span> </span></span></span></span><span style="color: #000000;"><span>該原則是員工提供出色客戶服務能力中最重要的要素之一。 有效的聆聽包括認真注意客戶在說什麼，並觀察客戶的肢體語言（如果是親自遇到的話），以發現非語言線索，從而提供有關客戶在想什麼和感覺的線索。</span></span></p>
+<p><span style="color: #000000;"><span><img alt="" height="338" src="./../images/image2.jpeg" width="566"/></span></span></p>
+<p><span style="color: #000000;"><span>  Listening. Photo used under CC-BY-NC-ND license from <a href="https://www.flickr.com/photos/cabinetoffice/6684174833/in/photolist-bbE9iF-aSnP2t-aSnPmv-goanm-fBHdY9-88e38W-aw3PTS-aw17LM-aw17Bn-aw16A4-aw16oP-aw3P93-aw19En-aw17HK-aw1932-aw3MSq-aw3MFG-aw16rR-aw16ZM-aw3LXL-bbE7tX-88aRs2-88e5WW-99pSBf-88aShR-8csGVq-88ewoj-88evEm-88eyaE-88aNfT-88e4vU-88bgYT-88euvd-88aMcn-88e4mu-88e4L9-88aP4R-ayWBXW-88e2nG-88aSn2-88aLrT-99mKqp-7RhBfM-6uQMCX-ehZWW2-dKGinD-9wN5Bz-kCADyW-bihZUV-6xRMaz" id="_i_1" lang="" target="_blank">Cabinet</a><a href="https://www.flickr.com/photos/cabinetoffice/6684174833/in/photolist-bbE9iF-aSnP2t-aSnPmv-goanm-fBHdY9-88e38W-aw3PTS-aw17LM-aw17Bn-aw16A4-aw16oP-aw3P93-aw19En-aw17HK-aw1932-aw3MSq-aw3MFG-aw16rR-aw16ZM-aw3LXL-bbE7tX-88aRs2-88e5WW-99pSBf-88aShR-8csGVq-88ewoj-88evEm-88eyaE-88aNfT-88e4vU-88bgYT-88euvd-88aMcn-88e4mu-88e4L9-88aP4R-ayWBXW-88e2nG-88aSn2-88aLrT-99mKqp-7RhBfM-6uQMCX-ehZWW2-dKGinD-9wN5Bz-kCADyW-bihZUV-6xRMaz" id="_i_2" lang="" target="_blank">Office</a><span>.<br/><span> <span> </span></span></span>聽著在CabinetOffice的CC-BY-NC-ND許可下使用的照片。</span></span></p>
+<p><span style="color: #000000;"><span>  An effective listener is able to ask clarifying questions to help define the situation. At the end of the exchange, the employee should be able to clearly restate what the real problem is and what the customer is asking the company to do in response. The example below illustrates effective listening skills.<br/><span> <span> </span></span>有效的傾聽者能夠提出明確的問題，以幫助確定情況。 在交換結束時，員工應該能夠清楚地說明真正的問題是什麼，以及客戶要求公司做些什麼作為回應。 下面的示例說明了有效的聆聽技巧。</span></span></p>
+<p><span style="color: #00ccff;">EXAMPLE 例子</span></p>
+<p><span style="color: #000000;"><span>參考影片: <a href="https://www.youtube.com/watch?v=d4DQvwKTj0k">https://www.youtube.com/watch?v=d4DQvwKTj0k</a></span></span></p>
+<p id="N106A6" lang="">Representative: Hello, thank you for calling the Metro Power Company, how may I help you?</p>
+<p id="N106A9" lang="">Customer: Hi, I need to report that my power is currently out.</p>
+<p id="N106AC" lang="">Representative: I’m happy to record the outage. I’ll need to get just a bit more information from you to properly document the outage. What is the service address, please?</p>
+<p id="N106AF" lang="">Customer: 456 Park Street, Cityville, Delaware.</p>
+<p id="N106B2" lang="">Representative: Thank you. And your name, please?</p>
+<p id="N106B5" lang="">Customer: Emily Fisher.</p>
+<p id="N106B8" lang="">Representative: Thank you Ms. Fisher. You are indicating that your power is out now. Let me check to see if we are already aware of the outage in your area. (pause) Thank you for your patience while I pull the information up in our system.</p>
+<p id="N106BB" lang="">Customer: Sure.</p>
+<p id="N106BE" lang="">Representative: OK, thanks again for your patience. An outage in your area has been documented, and there are currently technicians working to correct the issue.</p>
+<p id="N106C1" lang="">Customer: Do you know when service will be restored?</p>
+<p id="N106C4" lang="">Representative: The current estimate is that power should be restored in two to four hours.</p>
+<p id="N106C7" lang="">Customer: Well, that’s not too bad. Thanks for the information.</p>
+<p id="N106CA" lang="">Representative: You’re quite welcome. Is there anything else that I can help you with today?</p>
+<p id="N106CD" lang="">Customer: No, that’s all.</p>
+<p id="N106D0" lang="">Representative: Thank you for calling Metro Power Company.</p>
+<p>代表：您好，謝謝您致電都會電力公司，我該如何幫助您？</p>
+<p>客戶：您好，我需要我停機的原因。</p>
+<p>代表：我很高興能為您服務。我需要從您那裡獲取更多信息，以正確記錄停機情況。請問服務地址是什麼？</p>
+<p>客戶：特拉華州Cityville公園街456號。</p>
+<p>代表：謝謝。請問您的名字？</p>
+<p>客戶：艾米麗·費舍爾（Emily Fisher）。</p>
+<p>代表：謝謝費雪女士。您指示您的電源已耗盡。讓我檢查一下是否已經知道您所在地區的停電情況。 （暫停）感謝您在我在系統中獲取信息時的耐心配合。</p>
+<p>客戶：好的。</p>
+<p>代表：好的，再次感謝您的耐心配合。已記錄您所在區域的中斷，並且目前有技術人員正在糾正此問題。</p>
+<p>客戶：您知道何時恢復服務嗎？</p>
+<p>代表：當前估計是應該在兩到四個小時內恢復供電。</p>
+<p>客戶：嗯，還算不錯。謝謝。</p>
+<p>代表：不用客氣。今天還有什麼我可以幫助您的嗎？</p>
+<p>客戶：不，僅此而已。</p>
+<p>代表：感謝您致電都會電力公司。</p>
+<p>  In the conversation that we just reviewed, the customer service representative is polite, asks clarifying questions and confirms that she has the correct information, which indicates that she is using effective listening skills. She also thanks the customer for her patience with the outage and provides information on when the power is expected to be turned back on. The customer service representative also asks if the customer has any additional needs and thanks her for reporting the outage. All of this is conducted in a polite tone of voice.<br/><span> <span> </span></span>在我們剛剛審核的對話中，客戶服務代表很有禮貌，詢問您要澄清的問題並確認她掌握了正確的信息，這表明她正在使用有效的聆聽技巧。 她還感謝客戶對停電的耐心等待，並提供了有關何時應重新打開電源的信息。 客戶服務代表還詢問客戶是否還有其他需求，並感謝她報告中斷情況。 所有這些都是以禮貌的語調進行的。</p>
+<p><span>  When effective listening is used properly, customers will feel that you are empathizing with them and will think that you understand their situation. Truly empathizing with a customer means that you are able to mentally place yourself in the customer’s situation and understand what the customer is actually feeling at that time. An employee who has the ability to recognize and acknowledge the customer’s concerns as though the employee were actually walking in the customer’s shoes is empathizing with the customer. Employees may establish a connection with customers by sharing their own similar experiences and letting the customers know, “I understand how hard this must be for you right now.” Empathy goes beyond sympathy.<br/><span> <span> </span></span></span>正確使用有效的聆聽後，客戶會覺得您理解他們，並了解他們的處境。 真正地同情客戶意味著您能夠在心理上置身於客戶的情況中，並了解當時客戶的實際感受。 能夠識別並確認客戶顧慮的員工，置身於客戶的角度看事情，對客戶產生同情。 員工可以通過分享自己的相似經歷並讓客戶知道“我知道現在這對您來說有多麼艱辛”，可以與客戶建立聯繫。 同理心超越同情。</p>
+<p><span>  Here are several examples of empathetic statements that can create a connection with a customer in a positive way:<br/><span> <span> </span></span>以下是傭有同理心的幾個示例，這些示例可以以積極的方式與客戶建立聯繫：</span></p>
+<ul>
+<li lang="">"I am sorry the power is out right now. It is such a hot day and I know that it must be frustrating for you. Our company is working hard to restore power in your area so that you can have air conditioning again soon."<span> </span><br/><span> <span> </span></span>“很抱歉，目前電源已經關閉。天氣真熱，我知道那一定會讓您感到沮喪。我們公司正在努力恢復您所在地區的電源，以便您可以很快再次使用空調。”</li>
+<li lang="">"I know how frightening it must have been when the plane experienced bad turbulence on that last flight. I get somewhat anxious when I fly and I really hate it when the ride is bumpy."<br/><span> <span> </span></span><span> </span>“我知道當飛機在最後一次飛行中遇到嚴重的湍流時，一定會感到多麼恐懼。我飛行時會有些焦慮，而當飛機顛簸時我真的很討厭它。”</li>
+<li lang="">“You must be very frustrated that your computer can’t connect to the Internet. I need Internet access for almost everything that I do, so I know how hard it is to try to work without it. We’re figuring out the source of your connectivity issue, and we’ll fix it as soon as possible.”<span> </span><br/><span> <span> </span></span>“您一定對計算機無法連接到互聯網感到非常沮喪。 我幾乎需要做的所有事情都需要Internet訪問，所以我知道沒有Internet嘗試工作會有多麼困難。 我們正在找出您的連接問題的根源，並將盡快解決。” </li>
+</ul>
+<p>  <span>As a technician, it’s important to remember that not all customers will have a detailed knowledge of computers. We should use proper language that is simple and concise, not technical jargon that is confusing. If you are dealing with computer novices, it doesn’t help them for you to tell them the reason for their Internet connectivity issue is that “layer 3 of the OSI model is not functioning properly.” Instead, use effective listening principles to hear the customer’s problem, then share that the router isn’t working properly and therefore the customer cannot access the Internet, but you are going to get it fixed for them quickly. You must listen to the customer and clarify the problem. Don’t interrupt the customer, and always ensure you are restating the issue to the customer to confirm your understanding of the problem.<br/><span> <span> </span></span>作為技術人員，重要的是要記住，並非所有客戶都會對計算機有詳盡的了解。 我們應該使用簡單明了的適當語言，而不要使用容易引起混淆的技術術語。 如果您正在與計算機新手打交道，這並不能幫助他們告訴他們互聯網連接問題的原因是“ OSI模型的第3層無法正常運行”。 取而代之的是，使用有效的偵聽原理來聽取客戶的問題，然後分享路由器無法正常工作，因此客戶無法訪問Internet，但是您將很快為他們解決問題。 您必須聽取客戶的意見並澄清問題。 不要打擾客戶，並始終確保您將問題重述給客戶，以確認您對問題的理解。</span>     </p>
+<p><span style="color: #3366ff;">p32             </span><span> </span>     </p>
+<p><strong>Taking Ownership</strong></p>
+<p><span style="color: #ff6600;">取得所有權 </span><span> </span>         </p>
+<p>*<span>Recognize and explain the general principles of professional customer service.<br/><span> <span> </span></span>認識並解釋專業客戶服務的一般原則。</span>                             </p>
+<p><span>  Customers expect that an employee will take ownership of a situation. Taking ownership means that the employee takes responsibility for the situation and reassures the customer that the employee will take action. The employee should follow through and follow up afterwards to make sure the situation was resolved to the customer’s satisfaction. The employee should also promise to keep the customer informed as to what is happening along the way. An employee who is truly taking ownership of a situation is in regular contact with the customer, is continually trying to resolve the problem, and strives to keep the customer in the information loop.<br/><span> <span> </span></span>客戶期望員工將擁有情況的所有權。 擁有所有權意味著員工對情況負責，並向客戶保證員工將採取行動。 員工應跟進並隨後跟進，以確保情況得到解決，以使客戶滿意。 員工還應承諾使客戶了解沿途情況。 真正掌握情況所有權的員工與客戶保持定期聯繫，正在不斷嘗試解決問題，並努力使客戶保持信息循環。</span></p>
+<p><strong>Apologizing When Appropriate <span style="color: #ff6600;"> </span></strong><span style="color: #ff6600;">適當道歉</span></p>
+<p><span style="color: #000000;"><span>  Another effective customer service principle is to apologize when it is appropriate. There are two types of apologies. One type is used when the employee is taking ownership of a problem and apologizing for something that his company did or did not do:<br/><span> <span> </span></span></span>另一個有效的客戶服務原則是在適當的時候道歉。 道歉有兩種類型。 當員工對某個問題承擔所有權並為公司所做或未做的事情道歉時，使用一種類型：</span></p>
+<ul lang="">
+<li lang="">"I am sorry that I did not call you back yesterday to follow up."                              “很抱歉昨天我沒有給您回電話。”</li>
+<li lang="">"I am sorry that our company did not ship the product that you ordered."                “我很抱歉，我們的公司並沒有發貨您所訂購的產品。”</li>
+</ul>
+<p><span style="color: #000000;"><span>  It is always appropriate to apologize for errors that your company has made and to try to resolve them to the best of your ability. It is especially important to apologize to a customer who has become angry or frustrated about the situation.<br/><span> <span> </span></span></span>對於您的公司所犯的錯誤，並儘力解決這些錯誤，總是很抱歉的。 向因這種情況而感到生氣或沮喪的客戶道歉尤其重要。</span></p>
+<p><span style="color: #000000;"><span>  In some cases, the customer is angry about a situation that is really not the company’s fault, and that may not be something that the company can resolve at that point in time. In these situations, it may be appropriate to offer kind and sympathetic words that sound somewhat like an apology in order to defuse the situation. Examples of this might include:<br/><span> <span> </span></span>在某些情況下，客戶會對這種情況感到生氣，而這並非公司的過錯，而這可能不是公司當時可以解決的。 在這種情況下，為了緩和這種情況，可能應該提供聽起來像道歉的友善和同情的詞。 例如：</span></span></p>
+<ul lang="">
+<li lang="">"I am so sorry that you are frustrated."  “對不起，讓您感到沮喪。”</li>
+<li lang="">"I am sorry that happened to you."  “對不起，這件事發生在你身上。”</li>
+</ul>
+<p><span style="color: #00ccff;">EXAMPLE  例子</span></p>
+<p><span style="color: #000000;"></span></p>
+<p id="N106AB" lang="">Ron is a customer at a computer supply store. He calls one morning to talk with Joe, the manager.</p>
+<p id="N106AE" lang="">“Joe, I came by the store yesterday at 5:15 p.m. to get some things I needed to finish a job. It was really important that I finish the job yesterday. Your store was closed and I couldn’t get what I needed. I know you close at 5 p.m., but I thought for sure there would still be someone there. It was only 5:15. Some of your staff are usually there past 5 p.m. I didn’t get the job finished and lost a lot of money! I’m never shopping at your store again!”</p>
+<p lang="">Let’s take a look at how Joe might respond.</p>
+<p>羅恩（Ron）是一家計算機用品商店的客戶。 他打電話給一個早晨與經理喬談話。</p>
+<p>“喬，我昨天下午5:15在商店走。 拿到一些我完成工作所需的東西。 我昨天完成工作真的很重要。 您的商店關門了，我找不到我想要的東西。 我知道你下午5點關門，但是我想肯定還會有人在那兒。 只要到5:15。 您的一些員工通常在下午5點以後到達。 我沒有完成工作，卻損失了很多錢！ 我再也不會在您的商店購物了！”</p>
+<p>讓我們看一下喬可能如何回應。</p>
+<p><strong>Show Empathy </strong><span> </span><span style="color: #ff6600;">顯示同理心</span></p>
+<p><span style="color: #000000;"> <span> </span><span>“I understand how frustrated you must be.” In this situation, the company didn’t do anything wrong, so it would not be appropriate for Joe to apologize for the fact that the store closed at the regular posted time. If he says, “I’m so sorry we closed at 5 p.m., we really should have stayed open later,” it undermines the fact that the store has regular operating hours that are posted clearly on the door and on the company’s website.<br/><span> <span> </span></span></span></span><span class="" title="">“我知道你一定很沮喪。”</span><span> </span><span class="" title="">在這種情況下，公司沒有做錯任何事情，因此喬不宜因商店在正常發佈時間關閉而道歉。</span><span> </span><span class="" title="">如果他說：“對不起，我們下午5點關門，我們確實應該晚點營業。”這破壞了商店的正常營業時間清楚地印在門上和公司網站上的事實。</span></p>
+<p><span class="" title=""><span>  Joe needs to determine an appropriate response that acknowledges the customer’s frustration without undermining store policy.<br/><span> <span> </span></span>喬</span>需要確定一個適當的響應，在不損害商店政策的前提下，承認客戶的挫敗感。</span></p>
+<ul lang="">
+<li lang="">"This will take a bit longer than I thought, would you like to continue to hold or may I call you back?"  “這將比我想像的要花費更長的時間，您想繼續保留還是可以給您回電？”</li>
+<li lang="">"Is there a good number where I can reach you when I have the answer?"              “找到答案後，能找到您的電話嗎？”</li>
+</ul>
+<p><span>  Expectation management is crucial: always set expectations and meet those expectations. Do </span><em class="bold" lang="">not<span> </span></em><span>promise something you cannot deliver. As you work through the problem, maintain a positive attitude and tone of voice; you will get more referrals and business if you remain likeable. Remember: the customer isn’t the problem, the customer is the one<span> </span></span><em class="bold" lang="">with<span> </span></em><span>the problem. So, don’t argue with the customer; just solve the problem. Also, don’t minimize the customer’s issues: to the customer, it is a horrible, tragic, big problem that they need you to fix. Never blame the customer for the problem or be judgmental toward the customer. Saying “If you didn’t go to that website, you wouldn’t have this problem” isn’t helpful, it is just insulting. Also, your mobile phone can wait while you are interacting with a customer. Give the customer your full attention and avoid distractions.<br/><span> <span> </span></span>期望管理至關重要：始終設定期望並滿足這些期望。 不要承諾無法交付的東西。 解決問題時，請保持積極的態度和語氣； 如果您仍然喜歡，您將獲得更多的推薦和生意。 請記住：客戶不是問題，客戶是有問題的人。 因此，請勿與客戶爭論； 只是解決問題。 另外，不要最小化客戶的問題：對客戶而言，這是一個可怕的，悲劇性的大問題，需要他們解決。 切勿將問題歸咎於客戶或對客戶作出判斷。 說“如果您不訪問該網站，就不會遇到這個問題”，這無濟於事，只是侮辱。 同樣，您的手機可以在與客戶互動時等待。 給客戶充分的關注，避免分心。</span></p>
+<p><span><strong>Timeliness</strong> </span></p>
+<p><span><span style="color: #ff6600;">及時性</span></span></p>
+<p id="N106E6" lang="">  It is important to resolve customer issues as quickly as possible. The longer a problem persists without resolution, the greater the customer’s level of frustration.<br/><span> <span> </span></span>盡快解決客戶問題很重要。 無法解決的問題持續的時間越長，客戶的沮喪程度就越大。</p>
+<p id="N106E9" lang=""><strong>How do you judge timeliness? </strong><span style="color: #ff6600;"> 您如何判斷及時性？</span></p>
+<p lang=""><span style="color: #000000;">  <span>Timeliness is actually a very subjective thing: it is truly something that is defined by the customer and the situation. Some customers expect an immediate response (i.e. now or in the very near future: five to ten minutes). Other customers understand that the problem may take some time to resolve and may be willing to wait a couple of hours. Still others understand that the situation is going to take more time to resolve for a variety of reasons. For example, some more extensive repairs may be delayed for several days while waiting for parts to arrive.<br/><span> <span> </span></span></span>及時性實際上是一個非常主觀的東西：它確實是由客戶和情況所定義的東西。 一些客戶希望得到立即響應（即現在或不久的將來：五到十分鐘）。 其他客戶知道該問題可能需要一些時間才能解決，並且可能願意等待幾個小時。 還有一些人知道，由於多種原因，這種情況將需要更多時間來解決。 例如，在等待零件到達之前，一些更大規模的維修可能會延遲幾天。</span></p>
+<p lang=""><span style="color: #000000;"><span>  The nature of the problem will dictate what is a timely response. If a user or customer is at a work stoppage, a quick response by the technician is expected. If a user has forgotten a password, an immediate password reset is a timely response. In the case of a non-functioning printer in a room with other printers, a slower response is more acceptable.<br/><span> <span> </span></span>問題的性質將決定什麼是及時的響應。 如果用戶或客戶處於工作停頓狀態，則技術人員會做出快速響應。 如果用戶忘記了密碼，則立即重置密碼是及時的響應。 如果房間中的打印機無法正常運行，而其他打印機則可以接受較慢的響應。</span></span></p>
+<p lang=""><span style="color: #000000;"><span><img alt="" height="212" src="./../images/image5.png" width="320"/></span></span></p>
+<p lang=""><span style="color: #000000;"><span>  Photo used under CC-BY-NC license from<span> </span><span style="text-decoration: underline;"><span style="color: #0000ff;"><a href="https://www.flickr.com/photos/tyle_r/3598754751/" style="color: #0000ff; text-decoration: underline;">Tyle</a></span></span>.</span></span><span style="color: #000000;"><span>照片由Tyle根據CC-BY-NC許可使用。</span></span></p>
+<p lang=""><strong><span style="color: #000000;">Keeping the Customer Informed  </span></strong><span style="color: #ff6600;">保持客戶知情</span></p>
+<p lang=""><span style="color: #000000;">  <span>No matter how long a situation takes to resolve, it is critically important to continue to check back with customers and let them know that you are working on the problem during the process. This interaction helps lessen customers’ frustration, because they understand that you have not forgotten them and are working hard to resolve the situation. This strategy is tied closely to the issue of handling situations in a timely manner. A customer who is informed regularly throughout a situation, no matter how long it takes to resolve, is generally more happy with the outcome in the end.<br/><span> <span> </span></span>無論情況要花多長時間解決，至關重要的是繼續與客戶核對並讓他們知道您在此過程中正在解決問題。 這種互動有助於減輕客戶的沮喪感，因為他們知道您沒有忘記他們，並且正在努力解決問題。 該策略與及時處理情況緊密相關。 不管情況需要花費多長時間，在整個情況下定期得到通知的客戶通常會對最終結果感到更滿意。</span></span></p>
+<p lang=""><span style="color: #0000ff;">p34</span></p>
+<p lang=""><span style="color: #000000;"><strong>Problem Resolution and Follow-Up</strong>  </span></p>
+<p lang=""><span style="color: #000000;"><span style="color: #ff6600;">問題解決與跟進</span></span></p>
+<p lang=""><span style="color: #000000;">*<span>Recognize and explain the general principles of professional customer service.<br/><span> <span> </span></span></span></span><span style="color: #000000;">認識並解釋專業客戶服務的一般原則。</span></p>
+<p lang=""><span style="color: #000000;"><span>  It is imperative to follow up with the customer after problem resolution and make sure that everything was handled to the customer’s satisfaction, if at all possible.<br/><span> <span> </span></span>解決問題後必須與客戶保持聯繫，並確保一切可能的事情都得到客戶的滿意。</span></span></p>
+<p lang=""><span style="color: #000000;"><span><strong>What are the limits on ensuring customer issues are resolved? </strong><span style="color: #ff6600;">確保解決客戶問題有哪些限制？</span></span></span></p>
+<p lang=""><span style="color: #000000;">  S<span>ometimes it is impossible to resolve the situation to a customer’s complete satisfaction. A computer that was involved in a power spike might be a total loss and may not be able to be repaired. A computer virus may infect and destroy sensitive data on a key project. Sometimes valuable items are broken or damaged badly in a shipment. The customer may have special sentimental attachment to certain items. Or, data that was lost because of a system failure may not have been stored anywhere else. Lost or damaged items may not be replaceable, or a new item may not have the same sentimental meaning as the one that was lost or damaged. Lost data may be very difficult to reproduce. These types of situations are just part of life.<br/><span> <span> </span></span>有時無法解決這種情況以使客戶完全滿意。 涉及電源峰值的計算機可能會造成全部損失，並且可能無法修復。 計算機病毒可能感染並破壞關鍵項目上的敏感數據。 有時，裝運中的貴重物品嚴重損壞或損壞。 客戶可能對某些物品有特殊的情感依戀。 或者，由於系統故障而丟失的數據可能沒有存儲在其他任何地方。 丟失或損壞的物品可能無法更換，或者一件新物品可能與丟失或損壞的物品具有不同的情感含義。 丟失的數據可能很難重現。 這些情況只是生活的一部分。</span></span></p>
+<p lang=""><span style="color: #000000;"><span>  If the situation cannot be resolved to the customer’s satisfaction, it is important to apologize for that and to express sympathy and empathy for the way that the customer is feeling at that point in time. Some examples might be:<br/><span> <span> </span></span>如果無法解決這種情況以使客戶滿意，則必須為此道歉並表達對客戶當時感覺的同情和理解。 一些示例可能是：</span></span></p>
+<ul lang="">
+<li lang="">"I know how much you loved that car! I am so sorry it was totaled in that accident. I am just glad that you were not hurt."<br/><span> <span> </span></span>“我知道你對那輛車有多愛！我很抱歉那次事故我造成的損害。我很高興你沒有受傷。”</li>
+<li lang="">"I am so sorry that your favorite vase was broken during the move. I understand that it was your mother’s, and is not something that you can replace. We feel really bad about that."<br/><span> <span> </span></span>“很抱歉，您最喜歡的花瓶在搬家過程中被弄壞了。我知道那是您母親給您的花瓶，不是可以更換的東西。對此我們感到非常遺憾。”</li>
+<li lang="">"I know how disappointing it is that you’ve lost photos on your hard drive due to the lightning storm. I’m sorry that you’re going through this now. I know how much those photos must have meant to you; my photos of the trip I took with my family this summer mean more to me than I can say."<br/><span> <span> </span></span>“我知道您因雷雨而丟失了硬盤驅動器上的照片，這真令人傷心。對於您正在歷經此事，我們深感抱歉。我知道這些照片一定對您意味著什麼；我的照片今年夏天我與家人的旅行中，對我來說意義重大，莫過於我所能說的。”</li>
+</ul>
+<p lang=""><span style="color: #000000;"><span>  Always follow up with customers after repairs to verify that they are satisfied. This is a good approach for two reasons. First, the customer may be experiencing problems and would appreciate your indication that you are available to help rectify the problem. Second, the customer may have more business or a referral for you, because they were so happy with your performance. This is good customer service and also good business sense!<br/><span> <span> </span></span>維修後請始終與客戶保持聯繫，以確保他們滿意。 這是一個好方法，有兩個原因。 首先，客戶可能遇到問題，希望您能幫助您解決問題。 其次，客戶可能會對您有更多的業務或推薦，因為他們對您的表現非常滿意。 這是良好的客戶服務，也具有良好的商業意識！</span></span></p>
+<p lang=""><span style="color: #0000ff;">p35</span></p>
+<p lang=""><span style="color: #000000;"><strong>Proper Treatment of a Customer’s Property</strong>  <span style="color: #ff6600;">妥善處理客戶財產</span></span></p>
+<p lang=""><span style="color: #000000;">*<span>Set up a computer system and demonstrate operation for the customer.<br/><span> <span> </span></span></span>設置計算機系統並為客戶演示操作。</span></p>
+<p lang=""><span style="color: #000000;"><span>  Customers often entrust their confidential and personal data to you in order to have their devices repaired. Above all, respect the customers and their property. There are fundamental rules a technician should follow when handling a customer’s property:<br/><span> <span> </span></span></span></span><span title="">客戶通常將其機密和個人數據託付給您，以便對其設備進行維修。</span><span> </span><span title="">首先，要尊重客戶及其財產。</span><span> </span><span class="" title="">技術人員在處理客戶財產時應遵循的基本規則：</span></p>
+<ul lang="">
+<li lang="">Do not use a customer’s equipment for personal use. You may have been tasked with setting up email on a customer’s smartphone. That doesn’t give you the right to make personal calls on their phone while it is in your possession.<br/><span> <span> </span></span>請勿將客戶的設備用於個人用途。 您可能被要求在客戶的智能手機上設置電子郵件。 這並不意味著您擁有在您擁有的電話上通過電話撥打私人電話的權利。</li>
+<li lang="">Do not look through a device’s storage unless you need to in order to perform the job requested. If a customer asks you to back up all of his documents, it may be necessary to open the documents folder on the hard disk to copy those files over. This would be acceptable, but if he asked for documents and you are browsing through his pictures folder, this is unacceptable and outside the scope of the required job.<br/><span> <span> </span></span>除非需要執行請求的工作，否則請勿瀏覽設備的存儲空間。 如果客戶要求您備份所有文檔，則可能有必要打開硬盤上的documents文件夾以復制這些文件。 這是可以接受的，但是如果他要文件，而您正在瀏覽他的圖片文件夾，則這是不可接受的，超出了所需工作的範圍。</li>
+<li lang="">Ensure reasonable testing of a device. If you were testing a printer, you should print the minimal amount to verify functionality. There is no need to print 100 pages to verify that a printer works when a single page will suffice. Furthermore, ensure that the content printed is not offensive or personal in nature.<br/><span> <span> </span></span>確保合理測試設備。 如果要測試打印機，則應打印最少的數量以驗證功能。 當單頁就足夠時，無需打印100頁即可驗證打印機是否工作。 此外，請確保所打印的內容不具有冒犯性或個人性質。</li>
+<li lang="">Return all settings to the customer’s preferences. When you work on someone’s machine or device, return the device with all settings reverted to the customer’s preferences. If the monitor resolution must be changed to accomplish the repair task, ensure the customer’s preferred resolution is restored when the job is complete.<br/><span> <span> </span></span>將所有設置恢復為客戶的偏好設置。<span> </span><span title="">當您在某人的機器或設備上工作時，請返回設備並將所有設置恢復為客戶的首選項。</span><span> </span><span class="" title="">如果必須更改顯示器分辨率才能完成維修任務，請確保在作業完成後恢復客戶的首選分辨率。</span>
+<div class="tlid-input input">
+<div class="source-wrap">
+<div class="input-full-height-wrapper tlid-input-full-height-wrapper">
+<div class="source-input">
+<div class="source-footer-wrap source-or-target-footer">
+<div class="source-footer">
+<div class="speech-wrap source-or-target-footer-button left-positioned">
+<div aria-disabled="true" aria-label="請選擇一種要啟用語音輸入的特定語言" aria-pressed="false" class="speech-button goog-toolbar-button goog-toolbar-button-disabled" data-tooltip="請選擇一種要啟用語音輸入的特定語言" data-tooltip-align="t,c" id="gt-speech" role="button"><span class="jfk-button-img"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<p lang=""><span class="" title=""><span>  Above all, respect customers and their property. Remember that you are a customer too; think of how you would like to be treated, and ensure that you treat your customers in this manner.<br/><span> <span> </span></span></span></span><span class="" title="">首先，要尊重客戶及其財產。 請記住，您也是客戶。 考慮如何對待您，並確保您以這種方式對待客戶。</span></p>
+<ul lang="">
+<li lang="">Warm welcome and friendly smile. <span> </span><span style="color: #ff6600;">熱情的歡迎和友好的微笑。</span></li>
+<li lang="">Effective listening.  <span style="color: #ff6600;">有效傾聽。</span></li>
+<li lang="">Empathy. <span style="color: #ff6600;"> 同情。</span></li>
+<li lang="">Follow-through and follow-up.  <span style="color: #ff6600;">跟進再跟進。</span></li>
+</ul>
+<br />PCH2-Procedures and Safety << <a href='PCH2-Procedures and Safety.html'>Previous</a> <a href='40923216 UNIT 3      Page 37~48.html'>Next</a> >> 40923216 UNIT 3      Page 37~48</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

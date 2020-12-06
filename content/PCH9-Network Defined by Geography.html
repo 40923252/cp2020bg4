@@ -1,0 +1,277 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>cp2020bg4</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cp2020bg4</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='組員名單bg4.html'>組員名單bg4</a><li><a href='進度表.html'>進度表</a><li class='has-children'><a href='HomeWork1.html'>HomeWork1</a><ul class='dropdown'><li class='has-children'><a href='40723217 UNIT 1~2 Page 1~12.html'>40723217 UNIT 1~2 Page 1~12</a><ul class='dropdown'><li><a href='UNIT1.html'>UNIT1</a><li><a href='PCH1-The Basics-1.html'>PCH1-The Basics-1</a></li></ul><li class='has-children'><a href='40728238 UNIT 2      Page 13~24.html'>40728238 UNIT 2      Page 13~24</a><ul class='dropdown'><li><a href='PCH1-The Basics-2.html'>PCH1-The Basics-2</a><li><a href='PCH2-Procedures and Safety-1.html'>PCH2-Procedures and Safety-1</a></li></ul><li class='has-children'><a href='40923206 UNIT 2      Page 25~36.html'>40923206 UNIT 2      Page 25~36</a><ul class='dropdown'><li><a href='PCH2-Procedures and Safety-2.html'>PCH2-Procedures and Safety-2</a><li><a href='PCH3-Customer Relations.html'>PCH3-Customer Relations</a></li></ul><li><a href='40923216 UNIT 3      Page 37~48.html'>40923216 UNIT 3      Page 37~48</a><li><a href='40923220 UNIT 3      Page 49~60.html'>40923220 UNIT 3      Page 49~60</a><li><a href='40923227 UNIT 3      Page 61~72.html'>40923227 UNIT 3      Page 61~72</a><li class='has-children'><a href='40923233 UNIT 3~4 Page 73~84.html'>40923233 UNIT 3~4 Page 73~84</a><ul class='dropdown'><li><a href='PCH8-Cooling Methods.html'>PCH8-Cooling Methods</a><li><a href='PCH9-Network Defined by Geography.html'>PCH9-Network Defined by Geography</a></li></ul><li><a href='40923237 UNIT 4      Page 85~96.html'>40923237 UNIT 4      Page 85~96</a><li class='has-children'><a href='40923243 UNIT 4      Page 97~108.html'>40923243 UNIT 4      Page 97~108</a><ul class='dropdown'><li><a href='PCH13-IPv4 and IPv6 Addresses.html'>PCH13-IPv4 and IPv6 Addresses</a><li><a href='PCH14-TCP and UDP Protocols-1.html'>PCH14-TCP and UDP Protocols-1</a></li></ul><li class='has-children'><a href='40923252 UNIT 4      Page 109~120.html'>40923252 UNIT 4      Page 109~120</a><ul class='dropdown'><li><a href='PCH14-TCP and UDP Protocols-2.html'>PCH14-TCP and UDP Protocols-2</a><li><a href='PCH15-Introduction to Wireless Networking.html'>PCH15-Introduction to Wireless Networking</a><li><a href='PCH16-Internet Connectivity.html'>PCH16-Internet Connectivity</a></li></ul><li><a href='40923253 UNIT 5      Page 121~132.html'>40923253 UNIT 5      Page 121~132</a></li></ul><li><a href='HomeWork2.html'>HomeWork2</a><li><a href='HomeWork3.html'>HomeWork3</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">PCH8-Cooling Methods << <a href='PCH8-Cooling Methods.html'>Previous</a> <a href='40923237 UNIT 4      Page 85~96.html'>Next</a> >> 40923237 UNIT 4      Page 85~96<br /><h1>PCH9-Network Defined by Geography</h1>
+<p><span style="color: #00ff00;">Network overview(網路概述)</span></p>
+<p>Various network relationships including local area networks, wide area networks, personal local area networks, and metropolitan area networks, such as client/server and peer-to-peer networks, and discuss the types of network resources.</p>
+<p>各種網絡關係包括局域網、廣域網、個人局域網和城域網各種網絡關係，例如客戶端/服務器和對等網絡，並討論網絡資源類型。</p>
+<p><span style="color: #cc99ff;"><strong>Geographically defined network(地理定義的網絡)</strong></span></p>
+<p>The geographic location covered by the network. Starting from the area around a person, the area is called a personal area network (PAN). Next, expand out to the local area network (LAN), which contains the entire office floor or building. Moving outward again, we have a metropolitan area network, which is connected by multiple LANs to cover the entire city. Finally, there is a wide area network (WAN). The largest network defined by geographic location, it can spread all over the country or even the whole world.</p>
+<p>網絡所覆蓋的地理位置。從一個人周圍的區域開始，將該區域稱為個人區域網絡（PAN）。接下來，向外擴展到局域網（LAN），該局域網包含整個辦公樓層或建築物。再次向外移動，我們有城域網，城域網通過多個LAN連接在一起而覆蓋了整個城市。最後，有了廣域網（WAN）。按地理位置定義的最大網絡，它可以遍及全國甚至遍及全球。<strong><br/></strong></p>
+<p><img alt="" height="154" src="./../images/下載.jpg" width="326"/></p>
+<p><span style="color: #cc99ff;"><strong>Personal area network(個人區域網)</strong></span></p>
+<p>The range is very small, only a few meters, and Bluetooth is one of the main content used to create PAN, although USB and infrared can also be used for these networks. The range of Bluetooth is between 1 meter and 100 meters, depending on the type of Bluetooth used.</p>
+<p>範圍很小，只有幾米，藍牙是用於創建PAN的主要內容之一，儘管USB和紅外也可以用於這些網絡。藍牙的範圍在1米至100米之間，取決於使用的藍牙類別。</p>
+<p><span style="color: #cc99ff;"><strong>Metropolitan Area Network(城域網)</strong></span></p>
+<p>Think of it as MAN. Connect scattered locations throughout the city or county. This covers a larger geographic area than a local area network, but much smaller than a wide area network.</p>
+<p><br/>將其作為MAN。連接整個城市或縣的分散位置。這比局域網覆蓋更大的地理區域，但是比廣域網覆蓋的區域小得多。</p>
+<p><span style="color: #cc99ff;"><strong>Wan(廣域網)</strong></span></p>
+<p>Connect remotely located network components together. This can be done through a virtual private network (VPN) on the Internet or using a dedicated leased line that actually connects the city pairs together. Once the two local area networks are connected, they become part of the larger WAN topology.</p>
+<p>將地理位置遙遠的網絡組件連接在一起。可以通過Internet上的虛擬專用網絡（VPN）或使用將城市對實際連接在一起的專用租用線路來完成。兩個局域網一旦連接，它們便成為更大的廣域網拓撲的一部分。</p>
+<p><span style="color: #00ff00;"><strong>Topology-defined network(拓撲定義的網絡)</strong></span></p>
+<p></p>
+<p><span style="color: #cc99ff;"><strong>Bus topology(總線拓撲)</strong></span></p>
+<p>Usually a cable is used to pass through the area that needs network connection, and every device that wants to connect to the network is connected through the cable. The device uses a T-connector or vampire tap to insert the cable. Although the bus topology is an older technology that is no longer used physically, it can still be implemented as a logic in some cases.</p>
+<p><br/>通常使用一根電纜穿過需要網絡連接的區域，每個希望連接到網絡的設備都通過該電纜連接。設備使用T型連接器或吸血鬼抽頭插入電纜。儘管總線拓撲是一項較舊的技術，在物理上已不再使用，但在某些情況下仍可以作為邏輯實現。</p>
+<p><br/><span style="color: #cc99ff;"><strong>Ring topology(環形拓撲)</strong></span></p>
+<p>Using cables running in a loop loop, each device is connected to the loop. Data travels in a single direction on the ring. The most common is used with backbone fiber optic networks. Fiber Distributed Data Interface (FDDI) is a set of standards used to transmit data on fiber optic lines in LANs. Each device waits for it to communicate on the token ring by passing tokens around the token ring. A ring topology network is also called a token ring network. Because there are two counter-rotating rings, FDDI tends to provide more redundancy than standard bus topologies. However, in most LANs, bus topology and ring topology are quickly replaced by star topology.</p>
+<p>使用在環形迴路中運行的電纜，每個設備都連接到環形。數據在環上沿單個方向傳播。最常見的是與骨幹光纖網絡一起使用。光纖分佈式數據接口（FDDI）是用於在LAN中的光纖線上傳輸數據的一組標準。每個設備都通過在令牌環周圍傳遞令牌來等待其在令牌環上進行通信。環形拓撲網絡也稱為令牌環網絡。由於有兩個反向旋轉的環，因此FDDI傾向於提供比標準總線拓撲更多的冗餘。但是，在大多數LAN中，總線拓撲和環形拓撲都很快被星形拓撲取代。</p>
+<p><span style="color: #cc99ff;"><strong>Star topology(星型拓撲)</strong></span></p>
+<p>The star topology is the most common topology. Almost all LANs use a star topology. All devices in the star topology are connected to one point. A single connection point can be a hub or switch. In most modern networks, the single connection point will be a switch. Star topologies are the main physical topologies today, although they are not always used as logical topologies. Fiber optic connections can also be used for high-speed or high-security networks. The disadvantage of the star topology is that it will cause a single point of failure. If a central device (such as a switch) fails, the entire network will also fail. Different from the bus and ring network varieties, the star topology has the advantages of reducing costs and being easy to expand.</p>
+<p>星形拓撲是最常見的拓撲。幾乎所有局域網都使用星型拓撲。星型拓撲的所有設備都連接到一個點。單個連接點可以是集線器或交換機。在大多數現代網絡中，單個連接點將是一個交換機。星形拓撲是當今主要的物理拓撲，儘管它們並不總是用作邏輯拓撲。光纖連接也可以用於高速或高安全性網絡。星形拓撲的缺點是會造成單點故障。如果中央設備（如交換機）發生故障，整個網絡也會失敗。與總線和環形網絡品種不同，星形拓撲結構具有減少費用並易於擴展的優勢。</p>
+<p><span style="color: #cc99ff;"><strong>Full mesh topology(全網狀拓撲)</strong></span></p>
+<p>In order to solve the redundancy problem, a full mesh topology was created. So far, this topology is the most redundant and expensive topology because every node or workstation in the network is directly connected to every other node, but it is very expensive to maintain and operate.</p>
+<p>為了解決冗餘問題，創建了全網狀拓撲。到目前為止，此拓撲是最冗餘，最昂貴的拓撲，因為網絡中的每個節點或工作站都直接連接到每個其他節點，但維護和操作非常昂貴。</p>
+<p><span style="color: #cc99ff;"><strong>Partial mesh topology(部分網格拓撲)</strong></span></p>
+<p>In order to solve the cost problem created by the full mesh topology, a partial mesh topology was created. Part of the mesh topology is actually a hybrid full mesh topology. Provides redundancy and optimal routing between certain sites, while avoiding the overhead of connecting each site.</p>
+<p>為了解決由全網格拓撲創建的成本問題，創建了部分網格拓撲。部分網狀拓撲實際上是混合全網狀拓撲。提供了某些站點之間的冗餘和最佳路由，同時避免了連接每個站點的開銷。</p>
+<p><span style="color: #00ff00;">Network hardware(網路硬件)</span></p>
+<p>網絡設備根據其用途而有所不同。各種設備，例如集線器，交換機，路由器，網橋，網絡適配器和媒體。</p>
+<p>Network equipment varies according to its purpose. Various devices such as hubs, switches, routers, bridges, network adapters and media.</p>
+<p><strong><span style="color: #cc99ff;">hub(樞紐)</span></strong></p>
+<p>A hub is one of the simplest network devices. It connects multiple network devices and workstations to each other to form a network. It works by receiving a signal in one port and rebroadcasting the signal to all other ports. Hubs can be divided into two types: active or passive. The active hub repeats the received signal on all its ports and amplifies the signal to its maximum strength. Passive hubs only repeat the signal without adding any amplification. Hubs are an older technology that can be used to easily increase the number of available ports, but cause too many network errors and conflicts. There are newer variants of hubs, called smart hubs.</p>
+<p>The three basic types of Ethernet hubs are as follows:</p>
+<p>Passive hub-repeat signal without amplification<br/>Active Hub – Repeatedly amplify the signal<br/>Smart Hub-Active hub with enhanced functions (for example: SNMP)</p>
+<p>There is no inherent security designed inside the hub, but all information received from one port is rebroadcasted to another port. Essentially, the hub only relies on the connected workstation to "listen" to information on its port (if the information is specifically for that workstation). When the information is not sent to it, the workstation should just ignore the data.</p>
+<p>集線器是最簡單的網絡設備之一，將多個網絡設備和工作站相互連接，形成一個網絡，通過在一個端口中接收信號並將該信號重新廣播到其所有其他端口來工作。集線器可以分為主動或被動兩種。活動集線器會在其所有端口上重複接收到的信號，並將該信號放大到最大強度。無源集線器僅重複信號不增加任何放大。集線器是一種較舊的技術，可用於輕鬆增加可用端口的數量，但導致過多的網絡錯誤和衝突。集線器有較新的變體，稱為智能集線器。</p>
+<p>以太網集線器的三種基本類型如下：</p>
+<p>無源集線器–重複信號而不放大<br/>有源集線器–重複放大信號<br/>智能集線器–具有增強功能的活動集線器（例如：SNMP）</p>
+<p>集線器內部沒有設計固有的安全性，只是將從一個端口接收的所有信息重新廣播到另一個端口。本質上，集線器僅依賴於連接的工作站來“偵聽”其端口上的信息（如果該信息專門針對該工作站）。當信息沒有發送給它時，工作站應該只是忽略數據。</p>
+<p><span style="color: #cc99ff;"><strong>Bridge(橋梁)</strong></span></p>
+<p>The hub functions in a single conflict domain to operate together. A network device that can break the conflict domain into smaller units is needed to help the network operate more efficiently. This interconnection of multiple network segments makes the network Can be extended to large networks without significantly reducing the performance of the network. The bridge is smarter than the hub, and is actually analyzing the source, the media access control (MAC) address, and the MAC address for the unique identifier of the network interface for communication. In the frames entering the bridge, the internal MAC table is filled according to these addresses. Future routing decisions will be based on those destination MAC addresses. By only forwarding information to the root hub associated with the network device, this intelligent forwarding based on the target MAC address in the frame can reduce network traffic.</p>
+<p>集線器在單個衝突域中起作用的設備一起運行，需要一個可以將該衝突域分解為較小單元的網絡設備，以幫助網絡更高效地運行，多個網段的這種互連在一起使網絡可以擴展到大型網絡，而不會顯著降低該網絡的性能。橋比集線器更智能，實際上是在分析源、媒體訪問控制（MAC）地址MAC地址給網絡接口進行通信的唯一標識符。在進入網橋的幀中，並根據這些地址填充內部MAC表。未來的路由決策將基於那些目標MAC地址。通過僅將信息轉發到與網絡設備關聯的根集線器，這種基於幀中目標MAC地址的智能轉發可減少網絡流量。</p>
+<p><span style="color: #cc99ff;"><strong>switch(開關)</strong></span></p>
+<p>The switch is used to connect multiple network segments together, and each port on the switch acts as its own conflict domain. Each port on the switch works like a hub, with a bridge that connects the port of the hub to the workstation, thereby reducing the chance of network conflicts to zero.</p>
+<p>Switches are smart devices. They make forwarding decisions based on the MAC addresses they learn and place them in their MAC tables. The switch will analyze the source MAC address when it is input, and then fill in the source MAC address in the form of a frame to match the switch port. This allows the switch to forward frames only to the correct device on a single switch port, thereby improving security and network speed.</p>
+<p>交換機用於將多個網段連接在一起，交換機上的每個端口都充當其自己的衝突域。交換機上的每個端口都像是集線器一樣工作，帶有將集線器的端口連接到工作站的網橋，從而將網絡衝突的機會降低到零。</p>
+<p>交換機是智能設備，它們根據其學習到的MAC地址並將其放置在其MAC表中做出轉發決定。交換機在輸入源MAC地址時會對其進行分析，然後以幀的形式填充源MAC地址，以使其與交換機端口匹配。這允許交換機僅將幀轉發到單個交換機端口上的正確設備，從而提高安全性和網絡速度。</p>
+<p><span style="color: #cc99ff;"><strong>router(路由器)</strong></span></p>
+<p>The router separates network segments according to IP addresses, and forwards data packets out of the network segment only during configuration. The broadcast domain created by the switch can be decomposed and it is up to network professionals to configure the router to connect different networks together and perform intelligent routing decisions. The router has the closest relationship with the computer because it has a processor and a complex operating system. The router compares the IP addresses of the source and destination of the packet, and forwards traffic to or from the network based on this logical address (for example, IPv4 and IPv6 addresses). Routers are usually feature-rich devices and support multiple interface types, including unshielded twisted pair, optical fiber, and coaxial cable connections. Like a switch, each port on the router is a separate collision domain. Using access control lists, routers can block access to the network based on ports or addresses. This blocking increases the security of the network.</p>
+<p>路由器根據IP地址將網段分開，並且僅在配置時將數據包轉發出網段。可以分解由交換機創建的廣播域由網絡專業人員決定將路由器配置為將不同的網絡連接在一起並執行智能路由決策。路由器與計算機的關係最為密切，因為它具有處理器和復雜的操作系統。路由器比較數據包源和目標的IP地址，並基於此邏輯地址（例如，IPv4和IPv6地址）將流量轉發到網絡或從網絡轉發流量。路由器通常是功能豐富的設備，並且支持多種接口類型，包括非屏蔽雙絞線，光纖和同軸電纜連接。像交換機一樣，路由器上的每個端口都是一個單獨的衝突域。使用訪問控制列表，路由器可以根據端口或地址阻止對網絡的訪問。這種阻塞增加了網絡的安全性。</p>
+<p><strong><br/><span style="color: #cc99ff;">network adapter(網絡適配器)</span></strong></p>
+<p>The network adapter is used to connect the workstation to the network by using media. The network adapter can be built into the motherboard of the device in several ways:</p>
+<p>1. Use integrated port clustering.<br/>2. Add to the workstation by using the internal expansion card (PCIe, PCI or mini-PCIe).<br/>3. By using an externally connected card, such as USB or PCMCIA.<br/>4. There are two main types of network adapters: wired and wireless. The cable card supports various cable types.</p>
+<p><br/>網絡適配器用於通過使用媒體將工作站連接到網絡。可以通過幾種方式將網絡適配器內置到設備的主板中：</p>
+<p>1.使用集成端口集群。<br/>2.通過使用內部擴展卡（PCIe，PCI或mini-PCIe）添加到工作站。<br/>3.通過使用外部連接的卡，例如USB或PCMCIA。<br/>4.網絡適配器有兩種主要類型：有線和無線。有線卡支持各種電纜類型。</p>
+<p><span style="color: #cc99ff;"><strong>media(媒體)</strong></span></p>
+<p>Media is a term used to classify the physical connection between two device ports. The medium consists of copper cables, optical cables and even radio frequency waves. The cost of the medium varies greatly, from the free cost of radio waves to the cheap price of unshielded twisted pair (copper cable) to the expensive price of fiber optic cables. The type of media determines the bandwidth speed, capacity and distance limits of a particular network.</p>
+<p>媒體是用於對兩個設備端口之間的物理連接進行分類的術語。介質由銅纜，光纜甚至射頻波組成。介質的成本差異很大，從無線電波的免費成本到非屏蔽雙絞線（銅纜）的價格便宜，再到光纖電纜的價格昂貴。媒體的類型確定特定網絡的帶寬速度，容量和距離限制。</p>
+<p><span style="color: #00ff00;">Internet media(網路媒體)</span></p>
+<p><span style="color: #000000;">Optical fiber cables, discuss twisted pair cables and coaxial cables. For each cable type, the appearance, characteristics and types of the connector, as well as speed and limitations.</span></p>
+<p>光纖電纜，討論雙絞線電纜和同軸電纜。對於每種電纜類型、連接器的外觀、特性和類型以及速度和限制。</p>
+<p><br/><strong><span style="color: #cc99ff;">optic fibre cable(光纖電纜)</span></strong></p>
+<p><span style="color: #000000;">Fiber optic cables are constructed by using a glass core in the center of the cable, which is surrounded by a cladding. To send data from one end of the cable to the other, light from a light emitting diode (LED) or laser can be used to transmit the signal down the glass fiber in the center of the cable. Since data is transmitted through light and is not affected by electromagnetic interference (EMI), electromagnetic interference will affect traditional copper-based cables such as twisted pair and coaxial cables. Optical fiber has the ability to transmit data over long distances (many miles) without the use of repeaters. Large bandwidth and information that travels at the speed of light can also carry large amounts of data. Bandwidth can be measured in gigabits or even terabits per second.</span></p>
+<p>Multimode fiber optic cable (MMF):</p>
+<p>The core wire is larger than a single-mode optical cable. The core size of the multimode fiber is 62.5 microns. Micrometer is a very small unit of measurement, actually even smaller than the width of a human hair. The larger core of the MMF enables multiple propagation modes from one end of the cable to the other. In this way, a single fiber can transmit multiple signals on it, and each signal is transmitted with a slightly different reflection angle. When the light reaches the destination, the signal is then converted back to 1 and 0 and passed to the computer through the network interface card. Multimode optical fiber is usually used in shorter distance optical fiber connections, such as from router to switch, from switch to switch or from server to switch.</p>
+<p>Single-mode fiber optic cable (SMF)</p>
+<p>: The core wire is much smaller than the multimode optical cable. The core size of SMF is 10 microns. The smaller core of the SMF allows only a single mode of propagation of light from one end of the cable to the other. This through connection allows data to be transmitted over longer distances without a repeater than using MMF. When the light reaches the destination, the signal is then converted back to 1 and 0 and passed to the computer through the network interface card. Single-mode fiber is usually used for ultra-long-distance fiber connections, such as backbone connections from one local area network to another.</p>
+<p><span style="color: #cc99ff;"><span style="color: #000000;">光纖電纜是通過在電纜的中心使用玻璃芯構成的，該玻璃芯被包層圍繞。將數據從電纜的一端發送到另一端，可使用來自發光二極管（LED）或激光的光沿電纜中心的玻璃纖維向下傳輸信號。由於數據是通過光傳輸的，不受電磁干擾（EMI）的影響，電磁干擾會影響傳統的銅基電纜，如雙絞線和同軸電纜。光纖具有無需使用中繼器就可以很遠的距離（許多英里）發送數據的能力。大帶寬和以光速傳播的信息，還可以攜帶大量數據。帶寬可以每秒千兆比特或什至兆兆比特來度量。</span><br/></span></p>
+<p>多模光纜（MMF）:</p>
+<p>芯線比單模光纜大。多模光纖的纖芯尺寸為62.5微米。微米是非常小的度量單位，實際上甚至比人類頭髮的寬度還小。MMF的較大芯線實現了從電纜一端到另一端的多種傳播模式。這樣一來，單根光纖就可以在其上傳輸多個信號，而每個信號都以稍微不同的反射角傳輸。當光線到達目的地時，信號然後被轉換回1和0，並通過網絡接口卡傳遞到計算機。多模光纖通常用於較短距離的光纖連接中，例如從路由器到交換機，從交換機到交換機或從服務器到交換機。</p>
+<p>單模光纜（SMF）</p>
+<p>:芯線比多模光纜小得多。SMF的芯尺寸為10微米。SMF的較小芯線僅允許光從電纜一端到另一端的單一傳播模式。這種直通連接允許數據在沒有中繼器的情況下傳輸的距離比使用MMF傳輸的距離更長。當光線到達目的地時，信號然後被轉換回1和0，並通過網絡接口卡傳遞到計算機。單模光纖通常用於超長距離的光纖連接中，例如從一個局域網到另一個局域網的骨干連接。</p>
+<p><img alt="" height="168" src="./../images/下載 (1).jpg" width="299"/></p>
+<p><span style="color: #cc99ff;"><strong>Fiber optic cable connector(光纖電纜連接器)</strong></span></p>
+<p>Fiber optic cables belong to only the above two types: single-mode and multi-mode. However, there are four types at the end of each cable.</p>
+<p>User connector (SC) is a fiber optic cable connector, similar to ordinary audio and video cables, it uses a push-pull mechanism to lock into the port. If you want to enable two-way transmission to send and receive data, you need two fiber optic cables, so dual SC connectors are sometimes used.</p>
+<p>Straight (ST) connectors are fiber optic cable connectors that use bayonet plugs and sockets. It is the first de facto standard connector for most commercial wiring using fiber optic cables and is very common in fiber optic networks.</p>
+<p>The Lucent connector (LC) is a miniature version of the fiber optic SC connector. It looks a bit like SC, but only half the size, only 1.25mm instead of 2.5mm ferrule, so it is very useful when connecting multiple devices in a small area (such as the front panel of a 24-port switch).</p>
+<p>The mechanical transmission registration jack (MT-RJ) connector is a fiber optic cable connector, which is very popular in small devices due to its small size. The connector accommodates two optical fibers and mates with the positioning pins on the plug. These connectors are usually found to connect the switch to the patch panel because the front panels of both devices have a limited area.</p>
+<p>光纖電纜僅屬於上述兩種類型：單模和多模。但是，每條電纜的末端都有四種。</p>
+<p>用戶連接器（SC）是一種光纖電纜連接器，類似於普通的音頻和視頻電纜，它使用推挽機制鎖入端口。如果要啟用雙向傳輸以發送和接收數據，則需要兩條光纖電纜，因此有時會使用雙SC連接器。</p>
+<p>筆直（ST）連接器是使用卡口插頭和插座的光纖電纜連接器。它是大多數使用光纖電纜進行商業佈線的第一個事實上的標準連接器，在光纖網絡中非常常見。</p>
+<p>朗訊連接器（LC）是光纖SC連接器的微型版本。它看上去有點像SC，但尺寸只有一半，只有1.25毫米而不是2.5毫米的插芯，因此在小區域（例如24端口交換機的前面板）連接多個設備時非常有用。</p>
+<p>機械傳輸註冊插孔（MT-RJ）連接器是一種光纖電纜連接器，由於其尺寸小，在小型設備中非常受歡迎。該連接器容納兩根光纖，並與插頭上的定位銷配對。通常發現這些連接器將開關連接到配線架，因為兩個設備的前面板都有有限的區域。</p>
+<br />PCH8-Cooling Methods << <a href='PCH8-Cooling Methods.html'>Previous</a> <a href='40923237 UNIT 4      Page 85~96.html'>Next</a> >> 40923237 UNIT 4      Page 85~96</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

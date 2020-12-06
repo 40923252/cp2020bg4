@@ -1,0 +1,260 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>cp2020bg4</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cp2020bg4</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='組員名單bg4.html'>組員名單bg4</a><li><a href='進度表.html'>進度表</a><li class='has-children'><a href='HomeWork1.html'>HomeWork1</a><ul class='dropdown'><li class='has-children'><a href='40723217 UNIT 1~2 Page 1~12.html'>40723217 UNIT 1~2 Page 1~12</a><ul class='dropdown'><li><a href='UNIT1.html'>UNIT1</a><li><a href='PCH1-The Basics-1.html'>PCH1-The Basics-1</a></li></ul><li class='has-children'><a href='40728238 UNIT 2      Page 13~24.html'>40728238 UNIT 2      Page 13~24</a><ul class='dropdown'><li><a href='PCH1-The Basics-2.html'>PCH1-The Basics-2</a><li><a href='PCH2-Procedures and Safety-1.html'>PCH2-Procedures and Safety-1</a></li></ul><li class='has-children'><a href='40923206 UNIT 2      Page 25~36.html'>40923206 UNIT 2      Page 25~36</a><ul class='dropdown'><li><a href='PCH2-Procedures and Safety-2.html'>PCH2-Procedures and Safety-2</a><li><a href='PCH3-Customer Relations.html'>PCH3-Customer Relations</a></li></ul><li><a href='40923216 UNIT 3      Page 37~48.html'>40923216 UNIT 3      Page 37~48</a><li><a href='40923220 UNIT 3      Page 49~60.html'>40923220 UNIT 3      Page 49~60</a><li><a href='40923227 UNIT 3      Page 61~72.html'>40923227 UNIT 3      Page 61~72</a><li class='has-children'><a href='40923233 UNIT 3~4 Page 73~84.html'>40923233 UNIT 3~4 Page 73~84</a><ul class='dropdown'><li><a href='PCH8-Cooling Methods.html'>PCH8-Cooling Methods</a><li><a href='PCH9-Network Defined by Geography.html'>PCH9-Network Defined by Geography</a></li></ul><li><a href='40923237 UNIT 4      Page 85~96.html'>40923237 UNIT 4      Page 85~96</a><li class='has-children'><a href='40923243 UNIT 4      Page 97~108.html'>40923243 UNIT 4      Page 97~108</a><ul class='dropdown'><li><a href='PCH13-IPv4 and IPv6 Addresses.html'>PCH13-IPv4 and IPv6 Addresses</a><li><a href='PCH14-TCP and UDP Protocols-1.html'>PCH14-TCP and UDP Protocols-1</a></li></ul><li class='has-children'><a href='40923252 UNIT 4      Page 109~120.html'>40923252 UNIT 4      Page 109~120</a><ul class='dropdown'><li><a href='PCH14-TCP and UDP Protocols-2.html'>PCH14-TCP and UDP Protocols-2</a><li><a href='PCH15-Introduction to Wireless Networking.html'>PCH15-Introduction to Wireless Networking</a><li><a href='PCH16-Internet Connectivity.html'>PCH16-Internet Connectivity</a></li></ul><li><a href='40923253 UNIT 5      Page 121~132.html'>40923253 UNIT 5      Page 121~132</a></li></ul><li><a href='HomeWork2.html'>HomeWork2</a><li><a href='HomeWork3.html'>HomeWork3</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">40723217 UNIT 1~2 Page 1~12 << <a href='40723217 UNIT 1~2 Page 1~12.html'>Previous</a> <a href='PCH1-The Basics-1.html'>Next</a> >> PCH1-The Basics-1<br /><h1>UNIT1</h1>
+<p>電腦硬件是一門線上課程，其中的內容將以線上文本和活動的形式呈現<br/>PC Hardware is an online course, where the content will be presented in the form of both text and activities.</p>
+<p>與傳統課程比較會有更高度的靈活性，但學生必須有更高的自主性去承擔學習的責任<br/>While you will have more flexibility than in a traditional course, you will also have more responsibility for your own learning.</p>
+<p>為了這些，你將需要:</p>
+<p>計劃如何瀏覽每個單元<br/>確定如何使用課程的各種功能來幫助您學習<br/>確定何時需要尋求其他支持<br/>您需要了解課程內容，這些都有志助於學習<br/>Plan how to work through each unit.<br/>Determine how to use the various features of the course to help you learn.<br/>Decide when you need to seek additional support.<br/>What You Need to Know About the Course</p>
+<p>這些單元將會帶領並支持你成為獨立製作者，這會包刮:<br/>This course contains multiple modules. Each module has features designed to support you as an independent learner, including</p>
+<p>學習目標：這些是本節末尾應該做的事情的描述。學習目標將使您能夠指導學習努力，並在探索內容和參與活動時監控進度。<br/>Learning Objectives: These are descriptions of what you should be able to do at the end of a section. A Learning Objective will allow you to direct your learning efforts and enable you to monitor your progress as you explore the content and engage in the activities.</p>
+<p><span>解釋性內容：這是每章的信息性“內容”。由簡短的段落，信息，示例，圖像和說明組成，此說明性內容包含以下內容：<br/></span><span>Explanatory Content: This is the informational “meat” of every chapter. Consisting of short passages of text with information, examples, images, and explanations, this explanatory content contains pieces such as:</span></p>
+<p><span>演練：這些是嵌入在頁面中的視頻，以例證您正在探索的概念。他們可能會提供有關主題的更詳細說明，或指導您完成流程的各個步驟。<br/></span><span>Walk-throughs: These are videos embedded in the pages to exemplify the concepts you are exploring. They may provide a more detailed explanation of a topic or guide you through the steps of a process.<br/></span></p>
+<p><span>示例：旨在說明該課程支持您實現的技能和學習目標的特定應用。<br/></span><span>Examples: Designed to illustrate specific applications of the skills and learning objectives that the course supports you to achieve.</span></p>
+<p><span>實驗室：模擬和實驗室活動旨在為您提供與各種硬件元素進行交互的機會。<br/></span><span>Labs: Simulations and lab activities designed to give you an opportunity to interact with various hardware elements.</span></p>
+<p><span>不少學生都會注意到側邊欄，這些側邊欄有兩個目的：（1）快速回顧概念，例如PC硬件材料中使用的“高度專業化的輸入設備”，以及（2）提供其他材料或背景信息您可能會發現令人驚訝和有趣的東西(但是不會進到測驗當中)<br/>Many Students Wonder sidebars: These sidebars serve two purposes: (1) to give a quick review of concepts, such as "highly specialized input devices," that are used in the PC Hardware material and (2) to provide additional material or background information that you may find surprising and interesting but that is not going to be assessed in the Quiz.</span></p>
+<p><span>學習活動：在整個課程中散佈著不同類型的活動。它們包括:<br/>Learning Activities: There are different types of activities interspersed throughout the course. They include:<br/></span></p>
+<p><span><span style="background-color: #ffcc99;">實踐中學習：實踐中學習的實踐遵循簡短的說明和示例。這些活動使您有機會研究和實踐關鍵思想。實踐中學習有提示和反饋，以在需要時指導您。</span><br/><span style="background-color: #ffcc99;">Learn By Doing activities: Learn By Doing activities follow the short explanations and examples. These activities give you the chance to investigate and practice key ideas. Learn By Doing activities have hints and feedback to guide you if you need it.</span><br/></span></p>
+<p><span><span style="background-color: #ffa6a6;">"我了解了嗎？"：我了解了嗎？是您進行快速“自我審視”的機會。這些活動沒有提示，通常會跟隨“做中學”活動，以便您確定自己是否了解關鍵思想。這將幫助您確保已準備好進行分級活動</span><br/><span style="background-color: #ffa6a6;">Learn By Doing activities: Learn By Doing activities follow the short explanations and examples. These activities give you the chance to investigate and practice key ideas. Learn By Doing activities have hints and feedback to guide you if you need it.</span><br/><span></span></span></p>
+<p><span><span style="background-color: #ffff99;">測驗：這些是評分的短期作業。每個模塊的末尾都有一個測驗。測驗將向您和您的老師展示您對關鍵概念的理解程度。如果您閱讀了該信息並在每個模塊中進行了活動，那麼您應該已經做好測驗的準備。</span><br/><span style="background-color: #ffff99;">Quizzes: These are short assignments that are graded. There is a Quiz at the end of each Module. The Quiz will show you and your instructor how well you understand the key concepts. If you read the information and do the activities in each Module, you should be ready for the Quiz.</span><br/></span></p>
+<p><span><span style="background-color: #ccffcc;">單元回饋認知：這些活動旨在支持您作為獨立學習者的發展，鼓勵您反思自己的進步併計劃繼續取得成功。這些活動包括：</span><br/><span style="background-color: #ccffcc;">Metacognitive Activities: These activities are designed to support your development as an independent learner, encouraging you to reflect on your progress and plan for continuing success. These activities include:</span><br/></span></p>
+<p><span><span style="background-color: #e4c9ff;">回應活動：這些簡短的活動位於單元的末尾；他們鼓勵您反思本單元的學習進度，並估計您認為自己達到本單元學習目標的程度。這些活動還提供了一個分享繼續存在的問題和困難領域的地方（如果您與講師一起使用本課程，您的問題將與講師分享）。</span><br/><span style="background-color: #e4c9ff;">My Response activities: These short activities are located at the end of the module; they encourage you to reflect on your progress through the module and estimate how well you believe you've attained the module's learning objectives. These activities also provide a place to share continuing questions and areas of difficulty (if you're using the course in conjunction with an instructor, your questions will be shared with your instructor).</span><br/></span></p>
+<p><span><span style="background-color: #99ccff;">檢查點：這些活動位於課程的各個部分之後，這些部分可能特別具有挑戰性或需要其他練習。這些元認知檢查點可以鼓勵您回顧迄今為止的進展並進行自我評估：您準備好繼續嗎，還是您認為您需要其他材料，練習或自我評估？如果您感覺還沒有準備好繼續，可以使用這些檢查點來鏈接到其他學習資料。</span><br/><span style="background-color: #99ccff;">Checkpoints: These activities are located across the course after sections of content that can be particularly challenging or require additional practice. These metacognitive checkpoints encourage you to review your progress so far and assess yourself: are you ready to continue, or do you believe you need additional materials, practice, or self-assessment? If you feel that you're not ready to proceed, these checkpoints provide links to additional learning materials.</span><br/></span></p>
+<p></p>
+<p>Page2</p>
+<p>此時需要在特定的狀況下選擇正確的學習策略</p>
+<p><img alt="Understanding Your Problem Is Half the Solution (Actually the Most  Important Half) - Henrico Dolfing" height="200" src="https://1.bp.blogspot.com/-gfVRlP5ahfk/XUcjK7VosTI/AAAAAAABQTo/gvfmZfoP2hQdZeokExeqI-f3JOH2G0QMwCLcBGAs/s1600/problem_solving.png" width="200"/></p>
+<p>正應該要邊做邊學<br/><br/></p>
+<p>Q1:Joe剛剛啟動了內存和BIOS模塊。 他想盡快通過並參加測驗。 當他單擊該單元時，他看到一堆文本，上面散佈著一些活動，並試圖決定如何進行。<br/>Joe has just started the Memory and BIOS Module. He wants to get through it as quickly as possible and take the Quiz. As he clicks through the unit, he sees a bunch of text with some activities sprinkled throughout, and is trying to decide how to proceed.</p>
+<p><span style="background-color: #99ccff;">以下哪種學習策略對Joe可能最有效？</span><br/><span style="background-color: #99ccff;">Which of the following strategies would likely be most effective and efficient for Joe?</span></p>
+<p><span style="background-color: #ffc9c9;">Joe應該直接參加學習活動，而不必閱讀說明性文字。 對於每項活動，他應選擇不同的答案選項，以查看它們是對還是錯，並閱讀顯示的反饋。</span><br/><span style="background-color: #ffc9c9;">Joe should jump straight to the learning activities without reading the explanatory text. For each activity, he should select different answer choices to see if they’re right or wrong and read the feedback that appears.</span><br/><span style="background-color: #ffc9c9;">不正確，邊做邊學可以是一個好主意。但是，Joe應該記住，對正確和不正確答案的反饋不如解釋性文本那麼完整，因此他將錯過重要信息。儘管他可以從他已經知道的概念上完成更多的活動中受益，但這並不是他時間上最有效的利用。相反，他應該將注意力集中在涵蓋他尚不了解的概念的活動和文本上。</span><br/><span style="background-color: #ffc9c9;">Incorrect. Learning by doing can be a good idea. However, Joe should keep in mind that the feedback for correct and incorrect answers is not as complete as the explanatory text, so he will miss important information. Although he can benefit from completing more activities on concepts he already knows, this isn't the most efficient use of his time. Instead, he should be focusing his attention on activities and text that cover the concepts he doesn't already know.</span></p>
+<p><span style="background-color: #ccffcc;">Joe應該閱讀解釋性說明並完成學習活動。</span><br/><span style="background-color: #ccffcc;">Joe should read the explanatory text and complete the learning activities.</span><br/><span style="background-color: #ccffcc;">正確。 通過評估自己已經知道和不知道的知識，喬為自己提供了練習獨立學習的機會。</span><br/><span style="background-color: #ccffcc;">Correct. By evaluating what he already knows and doesn't know, Joe is giving himself a chance to practice independent learning.</span></p>
+<p><span style="background-color: #ffc9c9;">Joe應該計劃在那個欠缺實習的星期上課，而不是試圖找出自己繼續上課的最佳方式。</span><br/><span style="background-color: #ffc9c9;">Joe should plan to attend class that week rather than trying to figure out the best way to proceed on his own.</span><br/><span style="background-color: #ffc9c9;">不正確，這種方法非常無效。由於Joe尚未事先完成任何材料的學習，因此他將不知道在課堂上要問什麼問題。在嘗試自己學習教材前尋求幫助，Joe將錯過獨立學習的機會。</span><br/><span style="background-color: #ffc9c9;">Incorrect. This approach is very ineffective; since Joe hasn't worked through any of the material beforehand, he will not know what questions to ask in class. By seeking help before trying to learn the material himself, Joe also misses the chance to practice learning independently.</span></p>
+<p><span style="background-color: #ffc9c9;">Joe應該從頭到尾直接閱讀本單元，跳過活動。</span><br/><span style="background-color: #ffc9c9;">Joe should read the unit straight through from beginning to end, skipping the activities.</span><br/><span style="background-color: #ffc9c9;">不正確，儘管閱讀文本將為Joe提供該單元的信息內容，但跳過這些活動，他將錯過練習和檢查他理解的機會。他還需要利用預評估的結果，來幫助他認識是需要系統地工作，還是應該專注於特定技能。</span><br/><span style="background-color: #ffc9c9;">Incorrect. Although reading the text will provide Joe with the information content of the unit, by skipping the activities he misses the chance to practice and check his understanding. He also needs to use the results from his Pre-Assessment to help him recognize whether he needs to work through the unit systematically or if he should focus on specific skills.</span></p>
+<p>Joe正在權衡此處概述的選項，以計劃策略。 由於大多數人都忽略了計劃，所幸Joe是選擇簡單地開始手頭的任務。 儘管花費更少的時間計劃以實際完成工作似乎更為有效，但最終可能會效率低下。 請考慮一下，如果您不花時間去指導路線或計劃繞行建築彎道的路線，那麼需要花費多長時間。 您可以以幾乎相同的方式來考慮PC硬件-如果您不首先弄清已經知道的知識和將精力集中在什麼地方，則需要花費更長的時間才能完成課程。</p>
+<p>實際上，使專家與新手區分開的特徵之一是，專家花費更多的時間來計劃他們執行任務的方法，而花更少的時間實際完成任務。 新手則相反—匆匆完成了計劃階段，花了更多的時間完成總體任務。</p>
+<p>在此頁的邊欄，將會帶你觀看不同的問題，以利你進行接下來的活動。</p>
+<p>Page2-Question</p>
+<p><span style="background-color: #99ccff;">Alex剛剛開始了網絡硬件模塊的在線工作。 他想盡快解決它。 但他也想在測驗中表現出色。 他掃描了第一頁，並看到了文字，示例和一些活動。 他正在嘗試制定計劃以學習此頁面上的材料。</span></p>
+<p><span style="background-color: #99ccff;">以下是他考慮用於學習第一頁材料的一些策略。 您認為哪些策略可以幫助Alex學習PC硬件並為測驗做準備？</span></p>
+<p><span style="background-color: #99ccff;">為每個選項選擇是或否。<br/>Alex has just started the online work for the Networking Hardware Module. He wants to get through it as quickly as possible. But he also wants to do well on the Quiz. He scans the first page and sees text, examples, and some activities. He is trying to make a plan for learning the material on this page.<br/></span></p>
+<p><span style="background-color: #ccffcc;">閱讀文本和示例，並按照活動在頁面上顯示的順序進行操作。<br/><span>Read the text and examples and work through the activities in the order that they appear on the page.</span></span><span style="background-color: #ccffcc;"><br/>是的。 我們設計了本課程中的問題，以幫助您了解示例中解釋的關鍵思想。 因此，如果您在嘗試活動之前閱讀了此材料，則將學得最好。 此外，對於正確答案和錯誤答案的反饋也沒有文字說明那麼多。 因此，如果僅嘗試解決問題，則會丟失重要信息。<br/><span>Yes. We designed the problems in this course to help you understand the key ideas explained in the examples. So you will learn best if you read this material before attempting the activities. Also the feedback for correct and incorrect answers doesn’t have as much information as the text. So if you only try the problems, you’ll be missing important information.</span><br/></span></p>
+<p><span style="background-color: #ccffcc;"><span><span style="background-color: #ffcccc;">直接進入活動而不閱讀文本。 然後，對於每個活動，開始選擇不同的答案，以查看對與錯。 閱讀出現的反饋。</span><br/><span style="background-color: #ffcccc;">Go straight to the activities without reading the text. Then, for each activity, start picking different answers to see what is right and wrong. Read the feedback that appears.</span><br/><span style="background-color: #ffcccc;">否。 本課程中的問題旨在幫助您理解示例中解釋的關鍵思想。 因此，如果您在嘗試活動之前閱讀了此材料，則將學得最好。 此外，對於正確答案和錯誤答案的反饋也沒有文字說明那麼多。 因此，如果僅嘗試解決問題，則會丟失重要信息。</span><br/><span style="background-color: #ffcccc;">No. The problems in this course are designed to help you understand the key ideas explained in the examples. So you will learn best if you read this material before attempting the activities. Also the feedback for correct and incorrect answers doesn’t have as much information as the text. So if you only try the problems, you’ll be missing important information.</span><br/></span></span></p>
+<p><span style="background-color: #ccffcc;">閱讀頁面頂部的學習目標。 跳過文本并快速閱讀活動以熟悉您必須要做的事情。 然後返回並閱讀本文和示例，並按順序進行活動。</span><br/><span style="background-color: #ccffcc;">Read the learning objective at the top of the page. Skip the text and read through the activities quickly to get familiar with what you have to be able to do. Then go back and read the text and examples and work the activities in order.</span><br/><span style="background-color: #ccffcc;">是的。 通過閱讀目標並預覽活動，Alex將能夠更有效地計劃以研究頁面上的材料。 例如，他可以估計頁面需要多長時間才能完成。 他還可以考慮頁面上的材料與他在課堂上所做的事情之間的關係。</span><br/><span style="background-color: #ccffcc;">Yes.By reading the objective and previewing the activities, Alex will be able to plan more effectively for studying the material on the page. For example, he could estimate how long the page will take to complete. He could also think about how the material on the page relates to what he did in class.</span></p>
+<p><span style="background-color: #ffcccc;">由於Alex著急，他應該閱讀示例並跳過活動。</span><br/><span style="background-color: #ffcccc;">Since Alex is in a hurry, he should read the examples and skip the activities.</span><br/><span style="background-color: #ffcccc;">否。儘管閱讀示例將幫助Alex學習內容，但其餘的活動將幫助他確定自己是否有真正理解目前閱讀的內容。</span><br/><span style="background-color: #ffcccc;">No.Although reading the examples will help Alex learn the content, the activities will help him determine if he really understands what he read.</span></p>
+<p><span style="background-color: #ffcccc;">由於Alex著急，他應該在頁面上挑選一些活動，然後返回並尋找類似的示例來指導他。</span><br/><span style="background-color: #ffcccc;">Since Alex is in a hurry, he should pick out a few activities on the page then go back and look for a similar example to guide him.</span><br/><span style="background-color: #ffcccc;">否。當Alex從傳統數學教科書中學習程序時，這可能是一種適用於Alex的策略。 但是在此過程中，Alex不會看到帶有許多類似問題的長問題集。 相反，我們設計了一些活動來幫助您學習大創意，而不是練習程序。 因此，每項活動都以新的方式呈現信息或將大創意應用到新的環境中。 亞歷克斯將需要做所有的活動才能為測驗做好準備。</span><br/><span style="background-color: #ffcccc;">No.This might be a strategy that worked for Alex when he learned procedures from a traditional math textbook. But in this course, Alex will not see long problem sets with many similar problems. Instead, we designed the activities to help you learn big ideas, as opposed to practice procedures. So each activity presents information in a new way or applies the big ideas to new contexts. Alex will need to do all the activities to be ready for the Quiz.</span></p>
+<p>Page3</p>
+<p><em>在特定情況下識別適當的學習策略。</em><br/><em>Recognize appropriate study strategies in particular situations.</em></p>
+<p>Joe和Alex正在發展的技能是單元認知的一部分。 他們每個人都在學習用於學習特定主題的計劃策略技能。</p>
+<p>單元認知<br/>（定義）單元認知或“思考你的思路”是您對自己作為學習者的意識以及對自己的學習進行調節的能力。 它涉及五個不同的技能：<br/>1.評估任務。<br/>2.評估您的優點和缺點。<br/>3.規劃方法。<br/>4.應用策略並監控績效。<br/>5.反思並根據需要進行調整。</p>
+<p>下方顯示了單元認知循環的一個示例。<br/>Step1:Assess the task 評估任務<br/>了解完成任務涉及的內容（成功所需的步驟或組件）以及任何約束條件（時間，資源）</p>
+<p><span>Step2:EVALUATE strengths and weaknesses 評估優勢與劣勢<br/>評估你自己有關專案的技能與知識<br/></span></p>
+<p><span>Step3:<span>Plan 計畫<br/>為了製定適當的計劃，請考慮您對任務的評估以及對自身優勢和劣勢的評估。<br/></span></span></p>
+<p><span><span>Step4:Apply strategies monitor performance 應用策略並檢查績效<br/>在執行任務時請不斷監視進度，將您所處的階段與要實現的目標進行比較。<br/></span></span></p>
+<p><span><span>Step5:Reflect 反應<br/>回顧哪些有用，哪些是無用的策略，以便您下次可以調整方法，並在需要時重新閱讀一次。<br/></span></span></p>
+<p><span><span></span></span></p>
+<p>行動中的元認知<br/>Metacognition in Action</p>
+<p>您獲得一項任務，詢問自己：<br/><span>You get an assignment and ask yourself:</span></p>
+<p>“這項作業確切涉及什麼，我在本課程中從中學到了什麼？”<br/><span>“What exactly does this assignment involve and what have I learned in this course that is relevant to it?”</span></p>
+<p>您正在通過評估任務並評估與之相關的優缺點來鍛煉第一和第二元認知技能。 如果您考慮需要採取什麼步驟來完成作業並確定何時開始合理的訓練，那麼您正在通過計劃來鍛煉技能3。 如果您按計劃開始工作，並且意識到自己的工作速度比預期的要慢，那麼您將通過應用策略和監控績效來使技能4發揮作用。 最後，如果您根據任務的時間框架來反思自己的績效，並且發現一種同樣有效但更有效的工作方式，那麼您將掌握技巧五，根據需要反思和調整方法。<br/>You are exercising metacognitive skills #1 and #2 by assessing the task and evaluating your strengths and weaknesses in relation to it. If you think about what steps you need to take to complete the assignment and determine when it is reasonable to begin, you are exercising skill #3 by planning. If you start in on your plan and realize that you are working more slowly than you anticipated, you are putting skill #4 to work by applying a strategy and monitoring your performance. Finally, if you reflect on your performance in relation to your time frame for the task, and discover an equally effective but more efficient way to work, you are engaged in skill #5 of reflecting and adjusting your approach as needed.</p>
+<p>Page4</p>
+<p><em>在特定情況下識別適當的學習策略。</em><br/><em>Recognize appropriate study strategies in particular situations.</em></p>
+<p>單元認知不是火箭科學那般快速。在某些方面，它是相當普通且直觀的。但是，您會感到驚訝的是，人們經常缺乏強大的單元認知技能，而你會因為單元認知能力較弱會削弱學習效果感到很糟糕。 要測試您自己的元認知能力，請閱讀以下每種情況，並確定學生正在努力使用的單元認知。<br/>Metacognition is not rocket science. In some respects, it is fairly ordinary and intuitive. Yet you’d be surprised how often people lack strong metacognitive skills, and you’d be amazed by how much weak metacognitive skills can undermine performance. To test your own powers of metacognition, read each of the scenarios below and identify which metacognitive skill the student is struggling with.</p>
+<p><span style="background-color: #ffcccc;">Rudolfo預計學期將會非常繁忙，因此他會閱讀所有的說明，並在學期的第二週之前完成所有的學習活動。 雖然這可以騰出時間去做其他課程，但他發現當他參加最後的測驗時，他已經忘記了很多所學的知識。</span><br/><span style="background-color: #ffcccc;">這是因為魯道夫未能-正確評估學習結果。 準確評估自己的長處和短處，併計劃有效的策略來完成課程。</span><br/><span style="background-color: #ffcccc;">Rudolfo anticipates a very busy semester, so he reads all of the exposition and completes all of the learning activities by the second week of the semester. While this frees up his time for other courses, he finds that when he goes to take the last Quiz, he has forgotten a lot of what he learned. Rudolfo failed to  --properly assess the task. accurately evaluate his own strengths and weaknesses.plan an effective strategy for working through the course.</span></p>
+<p><span style="background-color: #ccffcc;">Rudolfo迄今為止在測驗之前完成工作的計劃是無效的。 因為他在學習和參加測驗之間花了很多時間，所以他腦海中的內容並不新鮮。 如果魯道夫在學習後立即完成了測驗，他忘記所學知識的風險就會降低。</span><br/><span style="background-color: #ccffcc;">Rudolfo’s plan to complete the work so far in advance of the Quizzes proved ineffective. Because he left so much time between studying and taking the Quizzes, the material was not fresh in his mind. Had Rudolfo completed the Quizzes right after studying, he could have reduced the risk that he would forget what he learned.</span></p>
+<p><span style="background-color: #ffcccc;">Penelope跳過了前段說明，直接進入了學習階段，從而在整個PC硬件課程中都做了自己的工作。 當她沒有正確地選擇一項學習活動的答案時，她會嘗試其他答案，直到找到正確的答案為止。 不幸的是，她沒有通過測驗，必須重新參加。 “哦，好。”她嘆了口氣。 “重頭開始吧。” 她再次打開第一個單元，跳過前段說明，直接進入學習階段。 Penelope她缺少調整自己的方法。</span><br/><span style="background-color: #ffcccc;">Penelope has worked her way through the entire PC Hardware course by skipping the exposition and jumping straight to the learning activities. When she doesn’t get an answer right on one of the learning activities, she tries the other answers until she discovers the correct one. Unfortunately, she does not pass the Quiz and has to retake it. “Oh well,” she sighs. “Back to the drawing board.” Once again, she opens the first unit, skips the exposition, and goes straight to the learning activities. Penelope has failed to adjust her approach.</span></p>
+<p><span style="background-color: #ccffcc;">這是最好的答案。 佩內洛普（Penelope）正在採用相同的失敗方法來第二次為測驗做準備，而第一次沒有從失誤中吸取教訓。</span><br/><span style="background-color: #ccffcc;">Strong metacognitive skills are essential for independent learning, so use the experience of monitoring your own learning for PC Hardware as an opportunity to hone these skills for other classes and tasks.</span></p>
+<p><span style="background-color: #ffcccc;">Pablo這個學期很忙，他不想給PC 硬件太多時間。 因此，他忽略了所有單元的死線，認為他將在學期末度過整個學期，貫穿整個課程。 最後，他沒有通過測驗。 他最大的錯誤是，他並沒有正確評估任務。</span><br/><span style="background-color: #ffcccc;">Pablo has a busy semester, and he does not want to give too much time to PC Hardware. So he ignores all of the deadlines, figuring that he’ll spend an entire weekend at the end of the semester working through the whole course. In the end, he fails the Quiz. His biggest mistake was that he did not properly assess the task.</span></p>
+<p><span style="background-color: #ccffcc;">Pablo低估了這項任務，並留給自己太多的時間來準備測驗。 由於他沒有適當計劃，這種低估也反映在他的策略中。</span><br/><span style="background-color: #ccffcc;">Pablo underestimated the task, and left himself too little time to prepare for the Quiz. This underestimation is also reflected in his strategy, as he has not planned appropriately.</span></p>
+<p></p>
+<p>強大的單元認知技能對於獨立學習至關重要，因此，請檢查自己對PC硬件的學習經驗，以此作為磨練這些技能來進行其他課程和任務的機會。<br/>Strong metacognitive skills are essential for independent learning, so use the experience of monitoring your own learning for PC Hardware as an opportunity to hone these skills for other classes and tasks.</p>
+<p>PCH 1 基礎</p>
+<p>重點單元：</p>
+<p><span style="background-color: #ff9999;">描述計算機的基本組件。</span><br/><span style="background-color: #ff9999;">Describe a computer’s basic components.</span></p>
+<p><span style="background-color: #ffff99;">標識計算機的硬件，軟件和固件。</span><br/><span style="background-color: #ffff99;">Identify a computer’s hardware, software, and firmware.</span></p>
+<p><span style="background-color: #ccffcc;">識別和分類輸入和輸出。比較並對比各種連接接口和電纜，並說明其用途。</span><br/><span style="background-color: #ccffcc;">Identify and categorize inputs and outputs. Compare and contrast various connection interfaces and cables and explain their purposes.</span></p>
+<p><span style="background-color: #99ccff;">將通用外圍設備連接到標準端口。</span><br/><span style="background-color: #99ccff;">Connect common peripherals to standard ports.</span></p>
+<p>快速連結：</p>
+<br />40723217 UNIT 1~2 Page 1~12 << <a href='40723217 UNIT 1~2 Page 1~12.html'>Previous</a> <a href='PCH1-The Basics-1.html'>Next</a> >> PCH1-The Basics-1</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

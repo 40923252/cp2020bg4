@@ -1,0 +1,215 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>cp2020bg4</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cp2020bg4</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='組員名單bg4.html'>組員名單bg4</a><li><a href='進度表.html'>進度表</a><li class='has-children'><a href='HomeWork1.html'>HomeWork1</a><ul class='dropdown'><li class='has-children'><a href='40723217 UNIT 1~2 Page 1~12.html'>40723217 UNIT 1~2 Page 1~12</a><ul class='dropdown'><li><a href='UNIT1.html'>UNIT1</a><li><a href='PCH1-The Basics-1.html'>PCH1-The Basics-1</a></li></ul><li class='has-children'><a href='40728238 UNIT 2      Page 13~24.html'>40728238 UNIT 2      Page 13~24</a><ul class='dropdown'><li><a href='PCH1-The Basics-2.html'>PCH1-The Basics-2</a><li><a href='PCH2-Procedures and Safety-1.html'>PCH2-Procedures and Safety-1</a></li></ul><li class='has-children'><a href='40923206 UNIT 2      Page 25~36.html'>40923206 UNIT 2      Page 25~36</a><ul class='dropdown'><li><a href='PCH2-Procedures and Safety-2.html'>PCH2-Procedures and Safety-2</a><li><a href='PCH3-Customer Relations.html'>PCH3-Customer Relations</a></li></ul><li class='has-children'><a href='40923216 UNIT 3      Page 37~48.html'>40923216 UNIT 3      Page 37~48</a><ul class='dropdown'><li><a href='PCH4-Cases, Form Factors, and Power Supplies.html'>PCH4-Cases, Form Factors, and Power Supplies</a><li><a href='PCH5-Motherboards, Expansion Buses, and Processors.html'>PCH5-Motherboards, Expansion Buses, and Processors</a></li></ul><li><a href='40923220 UNIT 3      Page 49~60.html'>40923220 UNIT 3      Page 49~60</a><li><a href='40923227 UNIT 3      Page 61~72.html'>40923227 UNIT 3      Page 61~72</a><li class='has-children'><a href='40923233 UNIT 3~4 Page 73~84.html'>40923233 UNIT 3~4 Page 73~84</a><ul class='dropdown'><li><a href='PCH8-Cooling Methods.html'>PCH8-Cooling Methods</a><li><a href='PCH9-Network Defined by Geography.html'>PCH9-Network Defined by Geography</a></li></ul><li><a href='40923237 UNIT 4      Page 85~96.html'>40923237 UNIT 4      Page 85~96</a><li class='has-children'><a href='40923243 UNIT 4      Page 97~108.html'>40923243 UNIT 4      Page 97~108</a><ul class='dropdown'><li><a href='PCH13-IPv4 and IPv6 Addresses.html'>PCH13-IPv4 and IPv6 Addresses</a><li><a href='PCH14-TCP and UDP Protocols-1.html'>PCH14-TCP and UDP Protocols-1</a></li></ul><li class='has-children'><a href='40923252 UNIT 4      Page 109~120.html'>40923252 UNIT 4      Page 109~120</a><ul class='dropdown'><li><a href='PCH14-TCP and UDP Protocols-2.html'>PCH14-TCP and UDP Protocols-2</a><li><a href='PCH15-Introduction to Wireless Networking.html'>PCH15-Introduction to Wireless Networking</a><li><a href='PCH16-Internet Connectivity.html'>PCH16-Internet Connectivity</a></li></ul><li><a href='40923253 UNIT 5      Page 121~132.html'>40923253 UNIT 5      Page 121~132</a></li></ul><li class='has-children'><a href='HomeWork2.html'>HomeWork2</a><ul class='dropdown'><li><a href='40723217.html'>40723217</a><li><a href='40728238.html'>40728238</a><li><a href='40923206.html'>40923206</a><li><a href='40923220.html'>40923220</a><li><a href='40923227.html'>40923227</a><li><a href='40923233.html'>40923233</a><li><a href='40923237.html'>40923237</a><li><a href='40923243 鄭丞崴.html'>40923243 鄭丞崴</a><li><a href='40923253 蘇政嘉.html'>40923253 蘇政嘉</a></li></ul><li class='has-children'><a href='HomeWork3.html'>HomeWork3</a><ul class='dropdown'><li><a href='1.html'>1</a><li><a href='2.html'>2</a><li><a href='3.html'>3</a><li><a href='4.html'>4</a><li><a href='5.html'>5</a><li><a href='6.html'>6</a><li><a href='7.html'>7</a><li><a href='8.html'>8</a><li><a href='9.html'>9</a><li><a href='10.html'>10</a><li><a href='11.html'>11</a><li><a href='12.html'>12</a><li><a href='13.html'>13</a><li><a href='14.html'>14</a><li><a href='15.html'>15</a><li><a href='16.html'>16</a><li><a href='17.html'>17</a><li><a href='18.html'>18</a><li><a href='19.html'>19</a><li><a href='20.html'>20</a><li><a href='21.html'>21</a><li><a href='22.html'>22</a><li><a href='23.html'>23</a><li><a href='24.html'>24</a><li><a href='25.html'>25</a><li><a href='26.html'>26</a><li><a href='27.html'>27</a><li><a href='28.html'>28</a><li><a href='29.html'>29</a><li><a href='30.html'>30</a><li><a href='31.html'>31</a><li><a href='32.html'>32</a><li><a href='33.html'>33</a><li><a href='34.html'>34</a><li><a href='35.html'>35</a><li><a href='36.html'>36</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">10 << <a href='10.html'>Previous</a> <a href='12.html'>Next</a> >> 12<br /><h1>11</h1>
+<p><span>Check Primality Functions (</span><span>檢查基本功能)</span><span></span></p>
+<p>Exercise 11 (and Solution)<br/>檢查基本功能 (練習11（和解決方案）)</p>
+<p><br/>Ask the user for a number and determine whether the number is prime or not. (For those who have forgotten, a prime number is a number that has no divisors.). You can (and should!) use your answer to Exercise 4 to help you. Take this opportunity to practice using functions, described below.<br/>(向用戶詢問一個數字，並確定該數字是否為質數。（對於那些忘記的人，質數是沒有除數的數。）您可以（並且應該！）使用練習4的答案來幫助您。藉此機會練習使用如下所述的功能。)</p>
+<p>Discussion(討論區)</p>
+<p>Concepts for this week:(本週的概念：)</p>
+<p>Functions(職能)<br/>Reusable functions(可重用功能)<br/>Default arguments(默認參數)</p>
+<p>Functions(職能)<br/>One of the tools programming gives us is the ability to break down problems into easier (or perhaps previously solved) or reusable subproblems. It is good practice to have a function have a single purpose, and the name of that function should hint at it’s purpose in some way.<br/>(編程提供給我們的工具之一是能夠將問題分解為更簡單（或可能先前解決）或可重用的子問題。優良作法是使一個函數具有單一目的，並且該函數的名稱應以某種方式暗示其目的。)</p>
+<p>Most programming languages have this idea of a function, subroutine, or subprogram. In Python, a function is a programming construct that allows exactly that.<br/>(大多數編程語言都具有函數，子例程或子程序的概念。在Python中，函數是一種允許這樣做的編程構造。)</p>
+<p>Let’s look at a simple example:<br/>(讓我們看一個簡單的例子：)</p>
+<p>def get_integer():<br/>return int(input("Give me a number: "))<br/>In this small example, we used the same code that asks a user for input as a tabbed line underneath this def statement. The def means that everything tabbed underneath is a function. The name get_integer() is just a name that I (the programmer) made up. If I just include this code inside a Python file and run it, nothing will happen - all I have done so far is wrapped my code inside of a function; I never told my program to actually RUN my function.<br/>(在這個小示例中，我們使用了相同的代碼來要求用戶輸入此def語句下方的選項卡行。的def手段，一切選項卡式下面是一個函數。這個名字get_integer()只是我（程序員）組成的名字。如果我只是將此代碼包含在Python文件中並運行它，則將不會發生任何事情-到目前為止，我所做的一切都將我的代碼包裝在一個函數中；我從未告訴過我的程序實際運行我的功能。)</p>
+<p>def get_integer():<br/>return int(input("Give me a number: "))</p>
+<p>age = get_integer()<br/>school_year = get_integer()<br/>if age &gt; 15:<br/>print("You are over the age of 15")<br/>print("You are in grade " + str(school_year))<br/>What I have done here is called the function (told it to run) by writing age = get_integer(). When this line of code runs, what happens is the program will execute (run) the function by asking me for a number, then returning it (giving it back to me) by saving it inside the variable age. Now when I want to ask the user for another number (this time representing the school year), I do the same thing with the variable school_year.<br/>(我在這裡所做的事情通過編寫稱為函數（告訴它運行）age = get_integer()。當這行代碼運行時，程序將通過詢問我一個數字來執行（運行）該函數，然後將其保存在變量中以將其返回（返還給我）age。現在，當我想問用戶另一個數字（這次代表學年）時，我對變量做了同樣的事情school_year。)</p>
+<p>Reusable functions(可重用功能)<br/>This is all well and good, but I can make my function do much more for me. Right now, my function will always ask the user for a number by printing the string "Give me a number: ". What if I want to print a different string every time I ask the user for a number, but otherwise use the same idea for the function? In other words, I want a variable parameter in my function that changes every time I call the function based on something I (the programmer) want to be different.<br/>(這一切都很好，但是我可以讓我的功能為我做更多的事情。現在，我的函數將始終通過打印字符串向用戶詢問一個數字"Give me a number: "。如果我想每次問用戶一個數字時都想打印一個不同的字符串，但對於該函數使用相同的想法怎麼辦？換句話說，我希望函數中的變量參數在每次調用函數時都根據我（程序員）希望與眾不同的事物而改變。)</p>
+<p>I can do this by passing (giving) my function a variable. Like this:<br/>(我可以通過傳遞（給我的）函數一個變量來做到這一點。像這樣：)</p>
+<p>def get_integer(help_text):<br/>return int(input(help_text))</p>
+<p>Now what I can do when I call the function is something like this:<br/>現在，當我調用該函數時，我可以做的是這樣的：)</p>
+<p>def get_integer(help_text):<br/>return int(input(help_text))</p>
+<p>age = get_integer("Tell me your age: ")<br/>school_year = get_integer("What grade are you in? ")<br/>if age &gt; 15:<br/>print("You are over the age of 15")<br/>print("You are in grade " + str(school_year))<br/>Now it is easier for a user to use the program, because the help text is different.<br/>(現在，由於幫助文本不同，因此使用戶更容易使用該程序。)</p>
+<p>These variables you pass to functions are called variables, parameters, or arguments.<br/>(傳遞給函數的這些變量稱為變量，參數或參數。)</p>
+<p>Default arguments(默認參數)</p>
+<p>In the example above, once I have added an argument to my function, I always have to give an argument when I call the function. I can’t forget to give the get_integer() function from above a string to print to the screen. In some cases, I want there to be a “default” behavior for my function that happens when I create an argument for it but don’t give it any.<br/>(在上面的示例中，在向函數添加參數後，在調用函數時始終必須提供參數。我不能忘記get_integer()從字符串上方給函數打印到屏幕上。在某些情況下，我希望函數有一種“默認”行為，這種行為會在為它創建參數但不給出任何參數時發生。)</p>
+<p>In the example above, if I don’t give a custom string (which may be 95% of the time I use this function), I just want the input() line to say "Give me a number: " and I want to save myself the trouble of writing this every single time I call the function. So what I can do is give my function default arguments. Like so:<br/>(在上面的示例中，如果我不提供自定義字符串（可能占我使用此函數的時間的95％），我只想讓input()行說出來，"Give me a number: "並且省去了每次編寫此字符串的麻煩我稱這個功能。所以我能做的就是給我的函數默認參數。像這樣：)</p>
+<p>def get_integer(help_text="Give me a number: "):<br/>return int(input(help_text))</p>
+<p>What happens now is I can use the function in two ways: by giving it an argument and by NOT giving it an argument.<br/>(現在發生的事情是我可以通過兩種方式使用該函數：通過給它一個參數和不給它一個參數。)</p>
+<p>def get_integer(help_text="Give me a number: "):<br/>return int(input(help_text))</p>
+<p>age = get_integer("Tell me your age: ")<br/>school_year = get_integer()<br/>if age &gt; 15:<br/>print("You are over the age of 15")<br/>print("You are in grade " + str(school_year))<br/>The first time I call the function, it will print "Tell me your age: ", but the second time, it will print "Give me a number: ", because I did not give it a string and it will execute the default behavior.<br/>(第一次調用該函數，它將打印"Tell me your age: "，但是第二次，它將打印"Give me a number: "，因為我沒有給它一個字符串，它將執行默認行為。)</p>
+<p>Recap(回顧)<br/>What a function does is wrap a piece of code that we want to reuse, labels it, and allows us to use it again relatively easily. You can add variables to the functions to make your code even MORE reusable, and you can add default arguments to these variables.<br/>(函數的作用是包裝我們要重用的一段代碼，對其進行標記，並允許我們相對容易地再次使用它。您可以將變量添加到函數中，以使代碼更加可重用，並且可以將默認參數添加到這些變量中。)</p>
+<p>Functions are a bit strange to deal with at first, but once you master them, they will be your savior in programming. Besides, the whole point of learning programming is abstraction, problem solving, breaking down problems, and that’s exactly what functions are all about.<br/>(一開始處理函數有點奇怪，但是一旦掌握了這些函數，它們就會成為您編程中的救星。此外，學習編程的重點是抽象，解決問題，分解問題，而這正是功能的全部所在。)</p>
+<br />10 << <a href='10.html'>Previous</a> <a href='12.html'>Next</a> >> 12</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

@@ -1,0 +1,335 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>cp2020bg4</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cp2020bg4</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='組員名單bg4.html'>組員名單bg4</a><li><a href='進度表.html'>進度表</a><li class='has-children'><a href='HomeWork1.html'>HomeWork1</a><ul class='dropdown'><li class='has-children'><a href='40723217 UNIT 1~2 Page 1~12.html'>40723217 UNIT 1~2 Page 1~12</a><ul class='dropdown'><li><a href='UNIT1.html'>UNIT1</a><li><a href='PCH1-The Basics-1.html'>PCH1-The Basics-1</a></li></ul><li class='has-children'><a href='40728238 UNIT 2      Page 13~24.html'>40728238 UNIT 2      Page 13~24</a><ul class='dropdown'><li><a href='PCH1-The Basics-2.html'>PCH1-The Basics-2</a><li><a href='PCH2-Procedures and Safety-1.html'>PCH2-Procedures and Safety-1</a></li></ul><li class='has-children'><a href='40923206 UNIT 2      Page 25~36.html'>40923206 UNIT 2      Page 25~36</a><ul class='dropdown'><li><a href='PCH2-Procedures and Safety-2.html'>PCH2-Procedures and Safety-2</a><li><a href='PCH3-Customer Relations.html'>PCH3-Customer Relations</a></li></ul><li class='has-children'><a href='40923216 UNIT 3      Page 37~48.html'>40923216 UNIT 3      Page 37~48</a><ul class='dropdown'><li><a href='PCH4-Cases, Form Factors, and Power Supplies.html'>PCH4-Cases, Form Factors, and Power Supplies</a><li><a href='PCH5-Motherboards, Expansion Buses, and Processors.html'>PCH5-Motherboards, Expansion Buses, and Processors</a></li></ul><li><a href='40923220 UNIT 3      Page 49~60.html'>40923220 UNIT 3      Page 49~60</a><li><a href='40923227 UNIT 3      Page 61~72.html'>40923227 UNIT 3      Page 61~72</a><li class='has-children'><a href='40923233 UNIT 3~4 Page 73~84.html'>40923233 UNIT 3~4 Page 73~84</a><ul class='dropdown'><li><a href='PCH8-Cooling Methods.html'>PCH8-Cooling Methods</a><li><a href='PCH9-Network Defined by Geography.html'>PCH9-Network Defined by Geography</a></li></ul><li><a href='40923237 UNIT 4      Page 85~96.html'>40923237 UNIT 4      Page 85~96</a><li class='has-children'><a href='40923243 UNIT 4      Page 97~108.html'>40923243 UNIT 4      Page 97~108</a><ul class='dropdown'><li><a href='PCH13-IPv4 and IPv6 Addresses.html'>PCH13-IPv4 and IPv6 Addresses</a><li><a href='PCH14-TCP and UDP Protocols-1.html'>PCH14-TCP and UDP Protocols-1</a></li></ul><li class='has-children'><a href='40923252 UNIT 4      Page 109~120.html'>40923252 UNIT 4      Page 109~120</a><ul class='dropdown'><li><a href='PCH14-TCP and UDP Protocols-2.html'>PCH14-TCP and UDP Protocols-2</a><li><a href='PCH15-Introduction to Wireless Networking.html'>PCH15-Introduction to Wireless Networking</a><li><a href='PCH16-Internet Connectivity.html'>PCH16-Internet Connectivity</a></li></ul><li><a href='40923253 UNIT 5      Page 121~132.html'>40923253 UNIT 5      Page 121~132</a></li></ul><li class='has-children'><a href='HomeWork2.html'>HomeWork2</a><ul class='dropdown'><li><a href='40723217.html'>40723217</a><li><a href='40728238.html'>40728238</a><li><a href='40923206.html'>40923206</a><li><a href='40923220.html'>40923220</a><li><a href='40923227.html'>40923227</a><li><a href='40923233.html'>40923233</a><li><a href='40923237.html'>40923237</a><li><a href='40923243 鄭丞崴.html'>40923243 鄭丞崴</a><li><a href='40923253 蘇政嘉.html'>40923253 蘇政嘉</a></li></ul><li class='has-children'><a href='HomeWork3.html'>HomeWork3</a><ul class='dropdown'><li><a href='1.html'>1</a><li><a href='2.html'>2</a><li><a href='3.html'>3</a><li><a href='4.html'>4</a><li><a href='5.html'>5</a><li><a href='6.html'>6</a><li><a href='7.html'>7</a><li><a href='8.html'>8</a><li><a href='9.html'>9</a><li><a href='10.html'>10</a><li><a href='11.html'>11</a><li><a href='12.html'>12</a><li><a href='13.html'>13</a><li><a href='14.html'>14</a><li><a href='15.html'>15</a><li><a href='16.html'>16</a><li><a href='17.html'>17</a><li><a href='18.html'>18</a><li><a href='19.html'>19</a><li><a href='20.html'>20</a><li><a href='21.html'>21</a><li><a href='22.html'>22</a><li><a href='23.html'>23</a><li><a href='24.html'>24</a><li><a href='25.html'>25</a><li><a href='26.html'>26</a><li><a href='27.html'>27</a><li><a href='28.html'>28</a><li><a href='29.html'>29</a><li><a href='30.html'>30</a><li><a href='31.html'>31</a><li><a href='32.html'>32</a><li><a href='33.html'>33</a><li><a href='34.html'>34</a><li><a href='35.html'>35</a><li><a href='36.html'>36</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">32 << <a href='32.html'>Previous</a> <a href='34.html'>Next</a> >> 34<br /><h1>33</h1>
+<p><strong>Exercise 33 (and Solution)Birthday Dictionaries</strong></p>
+<p><em>  This exercise is Part 1 of 4 of the birthday data exercise series. The other exercises are:<span> </span><a href="https://www.practicepython.org/exercise/2017/02/06/34-birthday-json.html">Part 2</a>,<span> </span><a href="https://www.practicepython.org/exercise/2017/02/28/35-birthday-months.html">Part 3</a>, and<span> </span><a href="https://www.practicepython.org/exercise/2017/04/02/36-birthday-plots.html">Part 4</a>.</em></p>
+<p><em><span>  此練習是生日數據練習系列4的第1部分。其他練習是：</span><a href="https://www.practicepython.org/exercise/2017/02/06/34-birthday-json.html"><span>第2部分</span></a><span>，</span><a href="https://www.practicepython.org/exercise/2017/02/28/35-birthday-months.html"><span>第3</span></a><span></span><a href="https://www.practicepython.org/exercise/2017/04/02/36-birthday-plots.html"><span>部分</span></a><span>和<a href="https://www.practicepython.org/exercise/2017/04/02/36-birthday-plots.html">第4部分</a>。</span></em></p>
+<p><em></em></p>
+<p><span>  For this exercise, we will keep track of when our friend’s birthdays are, and be able to find that information based on their name. Create a dictionary (in your file) of names and birthdays. When you run your program it should ask the user to enter a name, and return the birthday of that person back to them. The interaction should look something like this:</span></p>
+<p><span><span>  在本練習中，我們將追蹤朋友的生日，並能夠根據他們的姓名查找該信息。</span><span>在您的文件中創建一個名稱和生日字典。</span><span>當您運行程序時，應要求用戶輸入名稱，並將該人的生日返回給他們。</span><span>交互應如下所示：</span></span></p>
+<p><span><span></span></span></p>
+<pre><code class="language-pycon" data-lang="pycon">&gt;&gt;&gt; Welcome to the birthday dictionary. We know the birthdays of:<br/>Albert Einstein
+Benjamin Franklin
+Ada Lovelace
+&gt;&gt;&gt; Who's birthday do you want to look up?
+Benjamin Franklin
+&gt;&gt;&gt; Benjamin Franklin's birthday is 01/17/1706.<br/></code></pre>
+<pre><code class="language-pycon" data-lang="pycon">&gt;&gt;&gt;</code><code class="language-pycon" data-lang="pycon">歡迎來到生日字典。我們知道以下生日：<br/>艾爾伯特愛因斯坦<br/>本傑明·富蘭克林<br/>艾達·洛芙蕾絲<br/></code><code class="language-pycon" data-lang="pycon">&gt;&gt;&gt;</code><code class="language-pycon" data-lang="pycon">您想看誰的生日？<br/></code><code class="language-pycon" data-lang="pycon">本傑明·富蘭克林<br/></code><code class="language-pycon" data-lang="pycon">&gt;&gt;&gt;本傑明·富蘭克林的生日是1706年1月17日。</code></pre>
+<p><span><span>  Happy coding!</span></span></p>
+<p><span><span>  祝您編碼愉快！</span></span></p>
+<p><strong></strong></p>
+<p><strong>Discussion topics  討論主題</strong></p>
+<p>1.Dictionaries  辭典</p>
+<p>2.String formatting, briefly  字符串格式化，簡要</p>
+<p><em></em></p>
+<p><strong>Dictionaries  <span>辭典</span></strong></p>
+<p>  We covered dictionaries in <a href="https://www.practicepython.org/exercise/2014/12/06/22-read-from-file.html">a previous exercise</a>, but it’s been long enough that we will review them here and add a few more notes.</p>
+<p><span>  我們在</span><a href="https://www.practicepython.org/exercise/2014/12/06/22-read-from-file.html"><span><span>上一練習中</span></span></a><span><span>介紹了字典</span><span>，但是已經足夠長了，我們將在這裡對其進行回顧並添加更多註釋。</span></span></p>
+<p><span><span></span></span></p>
+<p><strong>QUICK REVIEW  快速回顧</strong></p>
+<p><span>  The main topic for this week is the concept of a </span><em>dictionary</em><span>. In Python they are called dictionaries, but in other languages they may be called<span> </span></span><em>maps</em><span><span> </span>or<span> </span></span><em>hashmaps</em><span>. The concept is the same: it is a way to use a<span> </span></span><em>key</em><span><span> </span>to access some<span> </span></span><em>value</em><span>. It is mapping one set of data (the keys) to another set of data (the values). The only way to access the<span> </span></span><em>value</em><span><span> </span>part of the dictionary is to use the<span> </span></span><em>key</em><span>.</span></p>
+<p><span><span>  本週的主題是</span><em><span><span>字典</span></span></em><span><span>的概念</span><span>。</span><span>在Python中，它們稱為字典，在其他語言中，它們可以稱為</span></span><em><span><span>map</span></span></em><span><span>或</span></span><em><span><span>hashmaps</span></span></em><span><span>。</span><span>概念是相同的：這是一種使用</span></span><em><span><span>鍵</span></span></em><span><span>來獲取某些</span></span><em><span><span>值的方法</span></span></em><span><span>。</span><span>它正在將一組數據（鍵）映射到另一組數據（值）。</span><span>訪問</span><span>字典</span><span>的</span></span><em><span><span>值</span></span></em><span><span>部分</span><span>的唯一方法</span><span>是使用</span></span><em><span><span>鍵</span></span></em><span><span>。</span></span></span></p>
+<p><span><span><span>  As an example, grocery store systems can store the prices for various items by using a dictionary. In Python, it would look something like this:</span></span></span></p>
+<p><span><span><span><span>  例如，雜貨店系統可以使用字典來存儲各種商品的價格。</span><span>在Python中，它看起來像這樣：</span></span></span></span></p>
+<p><span><span><span><span></span></span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="n">price_dictionary</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s">"banana"</span><span class="p">:</span> <span class="mf">1.50</span><span class="p">,</span>
+	<span class="s">"avocado"</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">,</span>
+	<span class="s">"heirloom tomato"</span><span class="p">:</span> <span class="mf">0.89</span><span class="p">,</span>
+	<span class="s">"cherry tomato pack"</span><span class="p">:</span> <span class="mf">3.00</span>
+<span class="p">}<br/><br/><br/></span></code></pre>
+<p><span><span><span><span>  You specify the dictionary between the <code class="highlighter-rouge"><span class="p">{}</span></code><span>. Key / value pairs are specified as list (separated by commas). The<span> </span></span><em>key</em><span><span> </span>is on the left side, and the<span> </span></span><em>value</em><span><span> </span>is on the right side. Notice how I split up the dictionary definition on multiple lines - I did that just for convenience. You can also write the dictionary on the entire line, but it is hard to read (and it probably even goes off your browser window screen):</span></span></span></span></span></p>
+<p><span><span><span><span><span><span>  您可以在之間指定字典</span><code class="highlighter-rouge"><span class="p">{}</span></code><span><span>。</span><span>鍵/值對被指定為列表（以逗號分隔）。</span><span>在</span></span><em><span><span>關鍵的</span></span></em><span><span>是在左側，和</span></span><em><span><span>值</span></span></em><span><span>是在右側。</span><span>請注意，我是如何在多行上拆分字典定義的-我這樣做只是為了方便。</span><span>您還可以在整個行上編寫字典，但是很難閱讀（它甚至可能超出您的瀏覽器窗口屏幕）：</span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span></span></span></span></span></span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="n">price_dictionary</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s">"banana"</span><span class="p">:</span> <span class="mf">1.50</span><span class="p">,</span> <span class="s">"avocado"</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">,</span> <span class="s">"heirloom tomato"</span><span class="p">:</span> <span class="mf">0.89</span><span class="p">,</span> <span class="s">"cherry tomato pack"</span><span class="p">:</span> <span class="mf">3.00</span><span class="p">}<br/><br/></span></code></pre>
+<p><span><span><span><span><span><span><span>  Now that we have the dictionary, we can query it (ask it) for the values associated with each key (for the prices associated with each food). We do that using brackets (<code class="highlighter-rouge">[]</code><span>). For example, to get the price of a banana:</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span>  現在我們有了字典，我們可以查詢（詢問）與每個鍵關聯的值（與每種食物關聯的價格）。我們使用方括號（</span><code class="highlighter-rouge">[]</code><span><span>）進行操作。</span><span>例如，要獲取香蕉的價格：</span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">price_dictionary</span><span class="p">[</span><span class="s">"banana"</span><span class="p">])</span>
+<span class="mf">1.50<br/><br/></span></code></pre>
+<p><span><span><span><span><span><span><span><span><span><span>  To get a list of all the keys, use the <code class="highlighter-rouge">.keys()</code><span><span> </span>method:</span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span>  要獲取所有鍵的列表，請使用</span><code class="highlighter-rouge">.keys()</code><span><span>方法：</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span> </span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">price_dictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="p">[</span><span class="s">"banana"</span><span class="p">,</span> <span class="s">"avocado"</span><span class="p">,</span> <span class="s">"heirloom tomato"</span><span class="p">,</span> <span class="s">"cherry tomato pack"</span><span class="p">]<br/><br/></span></code></pre>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span>  We have created our dictionary with many items in it, but we can also add items to it one by one. It is almost like accessing an element in the dictionary, except instead of using the element, we assign something to it.</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span>  我們創建了包含很多項目的字典，但是我們也可以一個接一個地添加項目。</span><span>就像訪問字典中的一個元素一樣，除了我們不使用該元素，而是為其分配了一些內容。</span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">price_dictionary</span><span class="p">[</span><span class="s">"granny smith apple"</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.49</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">price_dictionary</span><span class="p">[</span><span class="s">"red delicious apple"</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.35</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">price_dictionary</span><span class="p">[</span><span class="s">"granny smith apple"</span><span class="p">])</span>
+<span class="mf">0.49<br/><br/></span></code></pre>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span>  Not all key / value pairs have to be the same. You can do something like:</span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>  並非所有鍵/值對都必須相同。</span><span>您可以執行以下操作：</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">price_dictionary</span><span class="p">[</span><span class="s">"dog food"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"only at Petco"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">price_dictionary</span><span class="p">[</span><span class="s">"dog food"</span><span class="p">])</span>
+<span class="n">only</span> <span class="n">at</span> <span class="n">Petco<br/><br/></span></code></pre>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>  Of course, this can get messy quickly, so be careful!</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>  當然，這會很快變得混亂，所以要小心！</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><strong>MORE ON DICTIONARY KEYS    有關字典鍵的更多信息</strong></p>
+<p>  Dictionary keys must be unique. If you try to add an element to your dictionary with the same key, it will overwrite the value previously at that key:<br/><strong></strong></p>
+<p><span>  字典鍵必須唯一。</span><span>如果您嘗試使用相同的鍵將元素添加到字典中，它將覆蓋先前在該鍵上的值：</span></p>
+<p><span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">price_dictionary</span><span class="p">[</span><span class="s">"dog food"</span><span class="p">])</span>
+<span class="n">only</span> <span class="n">at</span> <span class="n">Petco</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">price_dictionary</span><span class="p">[</span><span class="s">"dog food"</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.99</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">price_dictionary</span><span class="p">[</span><span class="s">"dog food"</span><span class="p">])</span>
+<span class="mf">10.99<br/><br/></span></code></pre>
+<p><span>  If you try to ask the dictionary for a key that doesn’t exist, it will throw a <code class="highlighter-rouge">KeyError</code><span><span> </span>in your console, or your program will crash:</span></span></p>
+<p><span><span><span>  如果您嘗試向字典要求一個不存在的鍵，它將</span><span><span>在你的控制台中</span><span>拋出一個 KeyError<span> </span></span><span>，否則程序將崩潰：</span></span></span></span></p>
+<p><span><span><span><span></span></span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">price_dictionary</span><span class="p">[</span><span class="s">"lemon"</span><span class="p">]</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nb">KeyError</span><span class="p">:</span> <span class="s">'lemon'<br/><br/></span></code></pre>
+<p><span><span><span><span>  We will talk about how to “catch” errors in later exercises, but for now, there is another way to make sure you don’t throw an error. Instead of accessing elements in a dictionary with the <code class="highlighter-rouge">[]</code><span><span> </span>notation, you can instead use the<span> </span></span><code class="highlighter-rouge">.get()</code><span><span> </span>method. As the second argument to<span> </span></span><code class="highlighter-rouge">.get()</code><span>, you write down what the<span> </span></span><em>default value</em><span><span> </span>is for the dictionary: if there is no key like the one you wanted, what the dictionary should return:</span></span></span></span></span></p>
+<p><span><span><span><span><span><span>  我們將在以後的練習中討論如何“捕獲”錯誤，但是目前，還有另一種方法可以確保您不會拋出錯誤。</span><code class="highlighter-rouge">[]</code><span><span>您可以使用</span></span><code class="highlighter-rouge">.get()</code><span><span>方法</span><span>來代替使用符號詢問</span><span>字典中的元素</span><span>。</span><span>作為的第二個參數</span></span><code class="highlighter-rouge">.get()</code><span><span>，您寫下</span><span>字典</span><span>的</span></span><em><span><span>默認值</span></span></em><span><span>是</span><span>什麼</span><span>：如果沒有想要的鍵，則字典該返回什麼：</span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span></span></span></span></span></span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">price_dictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"banana"</span><span class="p">,</span> <span class="s">"no food like this"</span><span class="p">))</span>
+<span class="mf">1.50</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">price_dictionary</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"lemon"</span><span class="p">,</span> <span class="s">"no food like this"</span><span class="p">))</span>
+<span class="n">no</span> <span class="n">food</span> <span class="n">like</span> <span class="n">this<br/><br/></span></code></pre>
+<p><span><span><span><span><span><span><span>  This can be a helpful way of avoiding causing your program to crash.</span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span>  這是避免引起程序崩潰的有效方法。</span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span>  Not all Python objects can be keys to a dictionary. For something to be a key in a dictionary, it must be <em>immutable</em><span>. Basically, it means that you can’t change that variable somewhere else. So for example, numbers and strings can be keys in a dictionary, but lists cannot. Because you can<span> </span></span><code class="highlighter-rouge">.append()</code><span><span> </span>to a list, it cannot be a key in your dictionary. Lists can be values, just not keys:</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span>  並非所有的目標都可以成為Python字典中的鍵。為了使某些東西成為字典中的鍵，它必須是</span><em><span><span>不可變的</span></span></em><span><span>。</span><span>基本上，這意味著您無法在其他地方更改該變量。</span><span>因此，例如，數字和字符串可以是字典中的鍵，而列表則不能。</span><span>因為可以</span></span><code class="highlighter-rouge">.append()</code><span><span>列出，所以它不能成為字典中的鍵。</span><span>列表可以是值，而不能是鍵：</span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">price_dictionary</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span> <span class="o">=</span> <span class="s">"new food"</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nb">TypeError</span><span class="p">:</span> <span class="n">unhashable</span> <span class="nb">type</span><span class="p">:</span> <span class="s">'list'</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">price_dictionary</span><span class="p">[</span><span class="s">"lettuce"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.50</span><span class="p">,</span> <span class="mf">3.50</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">price_dictionary</span><span class="p">[</span><span class="s">"lettuce"</span><span class="p">])</span>
+<span class="p">[</span><span class="mf">1.50</span><span class="p">,</span> <span class="mf">3.50</span><span class="p">]<br/><br/></span></code></pre>
+<p><span><span><span><span><span><span><span><span><span><span>  Lastly, if we want to check if a particular key is in our dictonary, it is very easy. Just use the <code class="highlighter-rouge">in</code><span><span> </span>keyword:</span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span>  最後，如果我們要檢查字典中是否有特定的鍵，這很容易。只需使用</span><code class="highlighter-rouge">in</code><span><span>關鍵字：</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="s">"lemon"</span> <span class="ow">in</span> <span class="n">price_dictionary</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s">"banana"</span> <span class="ow">in</span> <span class="n">price_dictionary</span>
+<span class="bp">True<br/><br/></span></code></pre>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span>  These checks can be used together with <code class="highlighter-rouge">if</code><span><span> </span>statements to make more complex programs.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>  這些檢查可以與</span><code class="highlighter-rouge">if</code><span><span>語句</span><span>一起使用</span><span>以製作更複雜的程序。</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><strong>String formatting   字符串格式</strong></p>
+<p>  We’ve talked about strings a lot on this blog:<br/><strong></strong></p>
+<p><span>  我們在此博客上討論了很多字符串：</span></p>
+<ul>
+<li><a href="https://www.practicepython.org/exercise/2017/01/24/(/exercise/2014/01/29/01-character-input.html)">Exercise 1 about printing basic strings</a><span> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/></li>
+<li><a href="https://www.practicepython.org/exercise/2017/01/24/(/exercise/2014/03/12/06-string-lists.html)">Exercise 6 about turning strings into lists</a><span> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/><span> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/></li>
+<li><a href="https://www.practicepython.org/exercise/2017/01/24/(/exercise/2014/05/21/15-reverse-word-order.html)">Exercise 15 about where `join` statements are introduced</a><span> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/><span> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/><span> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/></li>
+</ul>
+<p><span></span></p>
+<p><span>  But we want to introduce one more optional concept for this exercise related to string formatting. There are a number of ways to format strings in Python, so I am just going to show you one quick way for a scenario you find yourself in often while programming.</span></p>
+<p><span><span>  但是，我們想為此練習引入與字符串格式化有關的另一個可選概念。</span><span>有很多方法可以用Python格式化字符串，因此，我將向您展示一種快速編程的方法，以解決您經常在編程時遇到的情況。</span></span></p>
+<p><span><span></span></span></p>
+<p><span><span>  A common scenario is like this: you want to print both a string and a number in the same line using one <code class="highlighter-rouge">print()</code><span><span> </span>statement. You can solve this problem like so:</span></span></span></p>
+<p><span><span><span><span>  常見的情況是這樣的：您想使用一個</span><code class="highlighter-rouge">print()</code><span><span>語句</span><span>在同一行中同時打印字符串和數字</span><span>。</span><span>您可以這樣解決此問題：</span></span></span></span></span></p>
+<p><span><span><span><span><span></span></span></span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"my number is "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="s">" and his number is "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="n">my</span> <span class="n">number</span> <span class="ow">is</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">his</span> <span class="n">number</span> <span class="ow">is</span> <span class="mi">10<br/></span></code></pre>
+<p><span><span><span><span><span>  But it gets tedious to use <code class="highlighter-rouge">+</code><span><span> </span>and<span> </span></span><code class="highlighter-rouge">str()</code><span>. Instead, you can use the<span> </span></span><code class="highlighter-rouge">.format()</code><span><span> </span>method to<span> </span></span><em>cast</em><span><span> </span>(i.e. transform) your number into a string when it gets printed.</span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span>  但是使用</span><code class="highlighter-rouge">+</code><span><span>和</span><span>會很麻煩</span></span><code class="highlighter-rouge">str()</code><span><span>。</span><span>相反，你可以使用</span></span><code class="highlighter-rouge">.format()</code><span><span>的方法來</span></span><em><span><span>投</span></span></em><span><span>（即變換）你的電話號碼轉換成字符串時，它就會被打印出來。</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span></span></span></span></span></span></span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="s">"my number is {} and his number is {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<span class="n">my</span> <span class="n">number</span> <span class="ow">is</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">his</span> <span class="n">number</span> <span class="ow">is</span> <span class="mi">10<br/></span></code></pre>
+<p><span><span><span><span><span><span><span><span>  What we are doing is substituting the symbol <code class="highlighter-rouge"><span class="p">{}</span></code><span><span> </span>in the print statement in the string we want to display in the exact place we want the number to go, and use the<span> </span></span><code class="highlighter-rouge">.format()</code><span><span> </span>to pass variables to the<span> </span></span><code class="highlighter-rouge"><span class="p">{}</span></code><span><span> </span>that appear in order. What happens is the variables<span> </span></span><code class="highlighter-rouge">a</code><span><span> </span>and<span> </span></span><code class="highlighter-rouge">b</code><span><span> </span>get converted into strings automatically and injected into our<span> </span></span><code class="highlighter-rouge">print</code><span><span> </span>statement cleanly. You can do this with floats, lists, dictionaries, or anything else you want to display.</span></span></span></span></span></span></span></span></span></p>
+<p>  我們正在做的是將<code class="highlighter-rouge"><span class="p">{}</span></code>要顯示的字符串中的符號替換為打印語句中要顯示的數字的確切位置，然後使用<code class="highlighter-rouge">.format()</code>將變量傳遞給<code class="highlighter-rouge"><span class="p">{}</span></code>按順序出現的。發生的事情是變量，<code class="highlighter-rouge">a</code>並<code class="highlighter-rouge">b</code>自動將其轉換為字符串並<code class="highlighter-rouge">print</code>乾淨地註入到我們的語句中。您可以使用浮點數，列表，字典或其他任何想要顯示的內容來執行此操作。</p>
+<p></p>
+<p><span>  There are a number of different formatting options if you want to get specific about how many decimal points to display, etc., but that is out of the scope of this exercise. If you want to read more about string formatting in Python, you can read about it </span><a href="https://pyformat.info/">on this helpful website that goes into a great amount of detail</a><span>.</span></p>
+<p><span><span>  如果要具體說明要顯示的小數點數等，可以使用多種格式設置選項，但這不在本練習的範圍之內。如果您想了解有關Python中字符串格式的更多信息，可以</span><a href="https://pyformat.info/"><span><span>在這個非常有用的網站上進行詳細了解</span></span></a><span><span>。</span></span></span></p>
+<p><strong></strong></p>
+<p><strong>Happy coding!    祝您編碼愉快！</strong></p>
+<p>Forgot how to <a href="https://www.practicepython.org/about/">submit exercises</a>?    <span>忘記瞭如何</span><a href="https://www.practicepython.org/about/"><span><span>提交練習</span></span></a><span><span>？</span></span></p>
+<br />32 << <a href='32.html'>Previous</a> <a href='34.html'>Next</a> >> 34</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

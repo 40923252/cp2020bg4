@@ -77,6 +77,13 @@
 <p>40923206、40923233、40923243</p>
 </td>
 </tr>
+<tr style="height: 5.75003px;">
+<td style="width: 144px; height: 5.75003px; text-align: center;">12/24</td>
+<td style="width: 155px; height: 5.75003px; text-align: center;"><span>組員HomeWork2、3上傳</span></td>
+<td style="width: 186px; height: 5.75003px; text-align: center;">
+<p>40728238</p>
+</td>
+</tr>
 </tbody>
 </table>
 <h1>HomeWork1</h1>
@@ -2064,9 +2071,311 @@ PCIe版本4 2 Gbps</span></pre>
 <p>Laptop lock. Photo used under CC-BY-SA license from  Seth Werkheiser.</p>
 <p>筆記本電腦鎖。 照片由Seth Werkheiser根據CC-BY-SA許可使用。</p>
 <h1>HomeWork2</h1>
-<h2>40723217</h2>
-<h2>40728238</h2>
-<h2>40923206</h2>
+<h2>40723217 林立翔</h2>
+<h2>40728238 廖健佑</h2>
+<p><span>一乙數列(python)</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import urllib.request
+#導入urllib.request
+target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
+#設target_url = "網址"
+cp1b = []
+#設cp1b=數列
+for line in urllib.request.urlopen(target_url):
+#重複打開target_url的迴圈定義line
+    cp1b.append(int(line.decode('utf-8').rstrip()))
+    #把line重新編碼加進cp1b(數列)   註:rstrip()刪除字尾符號
+print(cp1b)
+#印出cp1b</pre>
+<p></p>
+<p>成果:</p>
+<p><img caption="false" height="88" src="https://40823152.github.io/cp2020/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202020-11-28%20205145.png" width="600"/></p>
+<p>解題步驟:</p>
+<p>1. 導入物件</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import urllib.request
+</pre>
+<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"</pre>
+<p>3.設數列</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">cp1b = []</pre>
+<p>4.設line為打開url的迴圈，並且使數列cp1b增加編碼後的line，最後刪除字尾符號</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for line in urllib.request.urlopen(target_url):
+
+cp1b.append(int(line.decode('utf-8').rstrip()))</pre>
+<p><br/>5.印出1b的數列</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print(cp1b)</pre>
+<p></p>
+<p>from random import shuffle<br/>list = [40523138, 40523148, 40723217, 40728238, 40823148, 40823152, 40923201, 40923202, 40923203, 40923204, 40923205, 40923206, 40923207, 40923208, 40923209, 40923210, 40923211, 40923212, 40923213, 40923214, 40923216, 40923217, 40923218, 40923219, 40923220, 40923221, 40923223, 40923224, 40923225, 40923226, 40923227, 40923228, 40923229, 40923230, 40923231, 40923232, 40923233, 40923234, 40923235, 40923236, 40923237, 40923238, 40923239, 40923240, 40923241, 40923242, 40923243, 40923244, 40923245, 40923246, 40923247, 40923248, 40923249, 40923250, 40923251, 40923252, 40923253]<br/>shuffle(list)<br/>n = 5<br/>m = int(len(list)/n)<br/>list2 = []<br/>for i in range(0, len(list),m):<br/>list2.append(list[i:i+m])<br/>print(list2)</p>
+<p></p>
+<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">InputElement studListUrl = querySelector("#studListUrl");
+  String studUrl;
+  InputElement courseName = querySelector("#courseName");
+  String cName;
+  // 將 Label 改為 Textarea, 避免產生過程結果嵌入所在頁面
+  TextAreaElement output = querySelector("#output");
+    
+main() {
+  querySelector("#submit").onClick.listen((e) =&gt; grouping());
+}
+    
+grouping() {
+  output.innerHtml = "";
+    
+  if (studListUrl.value != "") {
+    studUrl = studListUrl.value;
+  } else {
+    studUrl = 'https://nfulist.herokuapp.com';
+  }
+    
+  if (courseName.value != "") {
+    cName = courseName.value;
+  } else {
+    cName = "cp2020";
+  }
+    
+  // 組序由 1 開始
+  int gth = 1;
+  // 迴圈序號變數
+  int i;
+  int j;
+  int total;
+  int inc;
+  // 每組學員暫存數列
+  var gpList = [];
+  // 全班分組數列
+  var group = [];
+  // 各組人數數列
+  var numList = [];
+    
+  HttpRequest.getString(studUrl).then((String resp) {
+    // 利用 trim() 去除字串最後的跳行符號, 之後再利用 split() 根據 \n 轉為數列
+    var studList = resp.trim().split("\n");
+    // 數列利用 shuffle() 方法以隨機方法弄亂順序
+    studList.shuffle();
+    total = studList.length;
+    output.text += "全班總計" + total.toString() + " 人\n";
+    numList = getNumList(studList.length);
+    inc = 0;
+    for (i in numList){
+      // 列印區隔符號
+      output.text += '=' * 20 + "\n";
+      output.text += "group $gth 有 " + i.toString() + " 人: \n";
+      gpList = [];
+      for (j = 0; j &lt; i; j++){
+        output.text += studList[j+inc] + "\n";
+        // 在各分組數列中加入將對應的學員學號
+        gpList.add(studList[j+inc]);
+      }
+      gth = gth + 1;
+      inc = inc + j;
+        //output.text += studList[j] + "\n";
+        // 逐步將各組暫存的分組數列加入全班分組數列中
+      gpList.sort();
+      group.add(gpList);
+    }
+    // 列出全班分組數列
+    output.text += group.toString() + "\n";
+    // 列出已經排序後的分組名單
+    output.text += '=' * 25 + "\n";
+    output.text += '以下為排序後的各組成員名單: \n';
+    gth = 1;
+    /*
+    404231
+    s4052
+    4062
+    s4072
+    4082
+    5072
+    5083
+    */
+    // 先列出純文字以 \n 跳行組員資料
+    for (i=0; i &lt; group.length; i++){
+      // 列印區隔符號
+      output.text += '=' * 20 + "\n";
+      output.text += "group $gth \n";
+      gpList = [];
+      for (j=0; j &lt; group[i].length; j++){
+        output.text += group[i][j] + "\n";
+      }
+      gth = gth + 1;
+    }
+       
+    gth = 1;
+    // 最後列出超文件以 &lt;br\&gt; 跳行組員資料, 包含倉儲與網站
+    for (i=0; i &lt; group.length; i++){
+      // 列印區隔符號
+      output.text += '\n' + '=' * 30 + "&lt;br \&gt;";
+      output.text += "group $gth &lt;br \&gt;";
+      gpList = [];
+      for (j=0; j &lt; group[i].length; j++){
+          if (group[i][j].startsWith('4052') || group[i][j].startsWith('4072')) {
+              output.text += "Repository: &lt;a href='https://github.com/s" +
+                                      group[i][j] + "/" + cName + "'&gt;" + group[i][j] +
+                                      "&lt;/a&gt;" + " | Site: &lt;a href='https://s" + group[i][j] +
+                                      ".github.io/" + cName + "'&gt;" + group[i][j] +
+                                      "&lt;/a&gt;&lt;br \&gt;";
+          }
+          else {
+              output.text += "Repository: &lt;a href='https://github.com/" +
+                                      group[i][j] + "/" + cName +"'&gt;" + group[i][j] +
+                                      "&lt;/a&gt;" + " | Site: &lt;a href='https://" + group[i][j] +
+                                      ".github.io/" + cName + "'&gt;" + group[i][j] +
+                                      "&lt;/a&gt;&lt;br \&gt;";
+          }
+      }
+      gth = gth + 1;
+    }
+  });
+}
+    
+List getNumList(int total){
+  // total student number
+  // int total = 65;
+  // initial each group expect to be "eachGrp" number of people
+  int eachGrp = 10;
+  // may divide into "grpNum" number of group
+  int grpNum = total ~/ eachGrp;
+  // vacant list
+  var splits = [];
+  // find remainder when total number divid into "grpNum" number of group
+  int remainder = total % grpNum;
+  // number of people in one group by calculation
+  int calGrp = total ~/ grpNum;
+    
+  for (int i = 0; i &lt; grpNum; i++) {
+    splits.add(calGrp);
+  }
+  //print(splits);
+    
+  for (int i = 0; i &lt; remainder; i++) {
+    splits[i] += 1;
+  }
+  //print(splits);
+  return splits;
+ }&lt;/pre&gt;
+&lt;p&gt;index.html&lt;/p&gt;
+&lt;pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"&gt;&lt;h4&gt;亂數分組:&lt;/h4&gt;
+學員名單 URL: &lt;input type="text" id="studListUrl" size="60" value="https://nfulist.herokuapp.com"&gt;&lt;br /&gt;
+課程代號: &lt;input type="text" id="courseName" size="15" value="cp2020"&gt;&lt;br /&gt;
+&lt;input type="submit" value="開始分組" id="submit"&gt;&lt;br /&gt;
+&lt;textarea id="output" cols="80" rows="10"&gt;&lt;/textarea&gt;&lt;/pre&gt;
+&lt;p&gt;style.css&lt;/p&gt;
+&lt;pre class="brush:css;auto-links:false;toolbar:false" contenteditable="false"&gt;body {
+  color: white;
+  font-size: 20px;
+}
+   
+input, select, textarea {
+font-size: 100%;
+}&lt;/pre&gt;
+&lt;p&gt;even_grouping.py&lt;/p&gt;
+&lt;pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"&gt;import random
+import requests
+    
+# getNumList 主要在每組最低人數下, 將不足 10 人的分組
+# 平均分配至各組
+def getNumList(total, eachGrp=10):
+    # total is the number of students
+    # each group at least 10 students
+    #eachGrp = 10;
+    # may divide into "grpNum" number of group
+    grpNum = total // eachGrp;
+    # check grpNum
+    #print(grpNum)
+    # vacan list
+    splits = []
+    # find remainder when total number divid into "grpNum" number of group
+    remainder = total % grpNum
+    # number of people in one group by calculation
+    calGrp = total // grpNum
+        
+    for i in range(grpNum):
+        splits.append(calGrp)
+            
+    # check first splits
+    #print(splits)
+      
+    for i in range(remainder):
+        splits[i] += 1
+        
+    # check final splits
+    #print(splits);
+    return splits;
+    
+# 儲存學生名單資料的 url
+target_url = "http://mde.tw/cp2020/downloads/get_student_list/2020spring_cd_2a_list.txt"
+# 利用 requests 讀取 url 中的資料
+f = requests.get(target_url)
+# get student list from target_url
+# 利用 splitlines() 將資料放入數列 studList
+studList = f.text.splitlines()
+# 每組預計分組的最低人數
+num_in_one_group = 10
+# 每組學員暫存數列
+gpList = []
+# 全班分組數列
+group = []
+# 各組人數數列
+numList = []
+# get numList
+numList = getNumList(len(studList), num_in_one_group)
+# check numList
+# 列出已經補齊的各組人數數列
+print("預計各組人數數列:" + str(numList))
+    
+output = ""
+gth = 1
+inc = 0
+    
+# 弄亂 studList
+random.shuffle(studList)
+output += "以下為尚未排序前的各組學員學號: \n"
+for i in numList:
+    # 列印區隔符號
+    output += '=' * 20 + "\n";
+    output += "group " + str(gth) + " 有 " + str(i) + " 人: \n"
+    # 每組學員暫存數列, 在此 reset
+    gpList = []
+    for j in range(i):
+        output += studList[j+inc] + "\n"
+        # 在各分組數列中加入將對應的學員學號
+        gpList.append(studList[j+inc])
+          
+    gth = gth + 1
+    inc = inc + j
+    # 將各組學員數列依照學號排序
+    gpList.sort()
+    group.append(gpList)
+    
+# 列出尚未排序前的分組結果
+print(output)
+# 列出已經完成排序的分組數列
+print("已經排序後的分組數列:" + str(group))
+    
+output = ""
+# 列出已經排序後的分組名單
+output += '=' * 25 + "\n"
+output += '以下為排序後的各組成員名單:\n'
+gth = 1
+    
+# 先列出純文字以 \n 跳行組員資料
+for i in range(len(group)):
+    # 列印區隔符號
+    output += '=' * 20 + "\n"
+    output += "group" + str(gth) + "\n"
+    gpList = []
+        
+    for j in range(len(group[i])):
+        output += str(group[i][j]) + "\n"
+          
+    gth = gth + 1
+        
+print(output)&lt;/pre&gt;
+&lt;h4&gt;使用 Brython&lt;/h4&gt;
+&lt;p&gt;&lt;a href="http://mde.tw/lab/content/Python.html"&gt;http://mde.tw/lab/content/Python.html&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"&gt;# 利用 Brython 內建的 open 開啟 url 後, 以 read() 將資料取出
+output = open('http://mde.tw/cp2020/downloads/get_student_list/2020spring_cd_2a_list.txt').read()</pre>
+<h2>40923206 黃思喬</h2>
 <p><a href="https://www.kaggle.com/nfu40923206/hw2-random-grouping">https://www.kaggle.com/nfu40923206/hw2-random-grouping</a></p>
 <p><strong>抓班級人數名單</strong></p>
 <p>import urllib.request  <span class="n" style="color: #3366ff;"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')" style="color: #3366ff;">＃導入<span> urllib.request</span></a></span><br/>target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"<br/>cp1b=[]<br/>for line in urllib.request.urlopen(target_url):  <a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')" style="color: #3366ff;">＃用於行進<span> urllib.request.urlopen(target_url):</span></a><br/>cp1b.append(line.decode('utf-8').rstrip())<span style="color: #3366ff;">  <a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')" style="color: #3366ff;">＃</a>cp1b.附加<span>(line.decode('utf-8').rstrip())</span><span style="color: #3366ff;"> </span></span><br/>print(cp1b) <span style="color: #3366ff;"><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')" style="color: #3366ff;">＃顯示出來</a></span></span><span style="color: #3366ff;"><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')" style="color: #3366ff;">（<span>cp1b</span>）</a></span></span></p>
@@ -2090,9 +2399,9 @@ PCIe版本4 2 Gbps</span></pre>
 <p><strong>Integration</strong></p>
 <p><strong></strong></p>
 <p>import urllib.request<span> </span><br/>target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"<br/>cp1b=[]<br/>for line in urllib.request.urlopen(target_url):<span> </span><br/>    cp1b.append(int(line.decode('utf-8').rstrip()))<br/>from random import shuffle<span> </span><br/>shuffle(cp1b)<span> </span><br/>n = 5<span> </span><br/>m = int(len(cp1b)/n)<span> </span><br/>list2 = []<span> </span><br/>for i in range(0, len(cp1b), m):<span> </span><br/>    list2.append(cp1b[i:i+m])<span> </span><br/>print(list2)</p>
-<h2>40923220</h2>
-<h2>40923227</h2>
-<h2>40923233</h2>
+<h2>40923220 陳胡文</h2>
+<h2>40923227 黃宇陽</h2>
+<h2>40923233 楊建霖</h2>
 <p><span><strong>import </strong></span><span>urllib</span>.request</p>
 <p><span>導入urllib.request 模塊</span><br/>target_url = "<span>https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776</span>"</p>
 <p><span>目標網址="https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"</span></p>
@@ -2103,8 +2412,9 @@ PCIe版本4 2 Gbps</span></pre>
 <p><span> 隨機排列(cp1a)</span><br/>b=[cp1a[i:i +6 ]<span> </span><span><strong>for</strong><span> </span></span>i<span> </span><span><strong>in</strong><span> </span></span>range(<span>0</span>, len(cp1a),<span> </span><span>6</span>)]</p>
 <p><span> 函數b=[函數cpla[i:i+6]]在i內形成迴圈(0~6的字符串)</span><br/><strong><span>print</span></strong>(b)</p>
 <p><span> 打印輸出函數b</span></p>
-<h2>40923237</h2>
+<h2>40923237 詹明憲</h2>
 <h2>40923243 鄭丞崴</h2>
+<h2>40923252 魏柏旻</h2>
 <h2>40923253 蘇政嘉</h2>
 <h1>HomeWork3</h1>
 <h2>1</h2>
@@ -2414,8 +2724,292 @@ PCIe版本4 2 Gbps</span></pre>
 </ol>
 <h2>22</h2>
 <h2>23</h2>
+<p>Exercise 23 File Overlap</p>
+<p>Given two<span> </span><code class="highlighter-rouge">.txt</code><span> </span>files that have lists of numbers in them, find the numbers that are overlapping.<span> </span><a href="http://www.practicepython.org/assets/primenumbers.txt">One<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file</a><span> </span>has a list of all prime numbers under 1000, and<span> </span><a href="http://www.practicepython.org/assets/happynumbers.txt">the other<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file</a><span> </span>has a list of happy numbers up to 1000.</p>
+<p>練習23<br/>給定兩個帶有數字列表的.txt文件，請查找重疊的數字。 一個.txt文件包含一個所有1000以下的質數的列表，另一個.txt文件包含一個最大為1000的幸福數字的列表。</p>
+<p>(If you forgot, prime numbers are numbers that can’t be divided by any other number. And yes, happy numbers are a real thing in mathematics - you can<span> </span><a href="http://en.wikipedia.org/wiki/Happy_number">look it up on Wikipedia</a>. The explanation is easier with an example, which I will describe below.)</p>
+<p>（如果您忘記了，質數是不能除以任何其他數字的數字。是的，快樂數是數學中的真實事物-您可以在Wikipedia上查找它。通過一個例子可以更容易地解釋這一點，我 將在下面進行說明。）</p>
+<p></p>
+<p>Sample solution<br/>For a simple look at the solution (without using functions and using a for loop), look no further. Read on for a solution using functions and list comprehensions, along with a detailed explanation in Python 3.</p>
+<p>範例解答<br/>為了簡單地看一下解決方案（不使用函數，也不使用for循環），別無所求。繼續閱讀以獲取使用函數和列表推導的解決方案以及Python 3中的詳細說明。</p>
+<p>The solution without functions using a for loop (read on for the one with functions and the explanation)</p>
+<p>沒有功能的解決方案使用for循環（繼續閱讀帶有功能和說明的解決方案）</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">primeslist = []
+with open('primenumbers.txt') as primesfile:
+    line = primesfile.readline()
+    while line:
+        primeslist.append(int(line))
+        line = primesfile.readline()
+ 
+happieslist = []
+with open('happynumbers.txt') as happiesfile:
+    line = happiesfile.readline()
+    while line:
+        happieslist.append(int(line))
+        line = happiesfile.readline()
+ 
+overlaplist = []
+for elem in primeslist:
+    if elem in happieslist:
+        overlaplist.append(elem)
+         
+print(overlaplist)</pre>
+<p></p>
+<pre>The solution with functions using list comprehensions (read on for the explanation):<br/>具有使用列表推導功能的解決方案（請繼續閱讀以獲取解釋）</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def filetolistofints(filename):
+    list_to_return = []
+    with open(filename) as f:
+        line = f.readline()
+        while line:
+            list_to_return.append(int(line))
+            line = f.readline()
+    return list_to_return
+ 
+primeslist = filetolistofints('primenumbers.txt')
+happieslist = filetolistofints('happynumbers.txt')
+ 
+overlaplist = [elem for elem in primeslist if elem in happieslist]
+print(overlaplist)</pre>
+<pre>The explanation<br/>The interesting thing about this problem is that it is an extension of a previous exercise asking to find the overlap of two lists. <br/>Instead of lists that are hard-coded into the file, the program will now read lists of information from files somewhere on the computer and perform the same overlap operation.<br/>說明<br/>關於此問題的有趣之處在於，它是先前練習的擴展，要求查找兩個列表的重疊部分。該程序現在將從計算機上某處的文件中讀取信息列表，並執行相同的重疊操作，而不是將這些列表硬編碼到文件中。</pre>
+<p>The first thing to do is open the .txt files and save them somewhere on your computer (easiest is in the same folder as the Python file you are working in). You notice that when you look at the file, each line of the file is an integer. Next, in Python we want to open one of the files and save the contents (as integers) into a list.</p>
+<p>要做的第一件事是打開.txt文件，並將其保存在計算機上的某個位置（最簡單的方法是與您正在使用的Python文件位於同一文件夾中）。您會注意到，當您查看文件時，文件的每一行都是一個整數。接下來，在Python中，我們要打開其中一個文件，然後將內容（作為整數）保存到列表中。</p>
+<p>This code snippet, as taken from the Exercise 23 explanation about reading from files, will open the file and print out all the lines.</p>
+<p>該代碼段摘自練習23中有關讀取文件的說明，它將打開文件並打印出所有行。</p>
+<p>with open('primenumbers.txt') as f:<br/>line = f.readline()<br/>while line:<br/>print(line)<br/>line = f.readline()<br/>We now want to just save each line as a separate integer into the list.</p>
+<p>現在，我們只想將每一行作為單獨的整數保存到列表中。</p>
+<p>primeslist = []<br/>with open('primenumbers.txt') as f:<br/>line = f.readline()<br/>while line:<br/>primeslist.append(int(line))<br/>line = f.readline()</p>
+<p><br/>All we did was change the print into an append to the list, and make an empty list at the beginning. Note that before I append the line to my list, I turn it into an int with the int() statement.</p>
+<p>我們要做的就是將打印內容更改為列表的追加，並在開頭添加一個空白列表。請注意，在將行添加到列表之前，請使用int（）語句將其轉換為int。</p>
+<p>Now we have a choice. We can either do this twice (copy and paste the exact same code), or write a function to do this for us whenever we want.</p>
+<p>現在我們有一個選擇。我們可以執行兩次（複製並粘貼完全相同的代碼），也可以編寫函數隨時為我們執行此操作。</p>
+<p>Let’s make this into a function, for explanation’s sake. What we want to do here is make a function that I give the name of the file to, and it gives back to me a list of all the numbers in that file, assuming each line contains a separate integer. We need to add two lines to our code snippet from above, the function header and the return statement. The function header is just the name of the function with the list of variables to return, and the return statement is the line return list_of_ints at the end of the function.</p>
+<p>為了說明起見，讓我們將其作為一個函數。我們要在這裡做的是創建一個函數，該函數將文件名提供給我，並且假定每行包含一個單獨的整數，它會向我返回該文件中所有數字的列表。我們需要在代碼段上方添加兩行，即函數標頭和return語句。函數頭只是函數的名稱，其中包含要返回的變量列表，而return語句是函數末尾的return list_of_ints行。</p>
+<p>def filetolistofints(filename):<br/>list_of_ints = []<br/>with open(filename) as f:<br/>line = f.readline()<br/>while line:<br/>list_of_ints.append(int(line))<br/>line = f.readline()<br/>return list_of_ints<br/>Now I can use this function to read both of my files in two simple lines:</p>
+<p>現在，我可以使用此功能以兩行代碼讀取兩個文件：</p>
+<p>primeslist = filetolistofints('primenumbers.txt')<br/>happieslist = filetolistofints('happynumbers.txt')</p>
+<p><br/>What I have now in my variables primeslist and happieslist are lists where each element was a number on a separate line in each of the files.</p>
+<p>我現在在變量primeslist和happieslist中擁有的列表是其中每個元素在每個文件中的單獨一行上都是數字的列表。</p>
+<p>My last step is to find the overlap between them. I can either use two for loops or a list comprehension. (If you need a refresher, Exercise 3 talks about for loops and Exercise 7 talks about list comprehensions.)</p>
+<p>我的最後一步是找到它們之間的重疊。我可以使用兩個for循環或列表理解。 （如果需要復習，練習3討論for循環，練習7討論列表推導。）</p>
+<p>As a list comprehension, you construct a new list that takes each element from primeslist and only adds it to our new list if it is inside happieslist.</p>
+<p>作為列表理解，您構造了一個新列表，該列表從primeslist中獲取每個元素，並且僅將其添加到我們的新列表中（如果它位於happieslist中）。</p>
+<p>overlaplist = [elem for elem in primeslist if elem in happieslist]<br/>This can also be done with a for loop, as below:</p>
+<p>overlaplist = []<br/>for elem in primeslist:<br/>if elem in happieslist:<br/>overlaplist.append(elem)<br/>And when the loop is done, overlaplist will contain all the elements of the overlap.</p>
+<p>並且當循環完成時，重疊列表將包含重疊的所有元素。</p>
+<p>Now we can just print our result (using Python 3 syntax) and be done.</p>
+<p>現在，我們可以打印結果（使用Python 3語法）並完成。</p>
+<p>print(overlaplist)</p>
+<p>For a full and concise solution once again, here it is:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def filetolistofints(filename):
+    list_to_return = []
+    with open(filename) as f:
+        line = f.readline()
+        while line:
+            list_to_return.append(int(line))
+            line = f.readline()
+    return list_to_return
+ 
+primeslist = filetolistofints('primenumbers.txt')
+happieslist = filetolistofints('happynumbers.txt')
+ 
+overlaplist = [elem for elem in primeslist if elem in happieslist]
+print(overlaplist)
+</pre>
 <h2>24</h2>
+<p>Exercise 24 Draw A Game Board<br/>This exercise is Part 1 of 4 of the Tic Tac Toe exercise series. The other exercises are: Part 2, Part 3, and Part 4.</p>
+<p>練習24<br/>此練習是Tic Tac Toe練習系列4的第1部分。 其他練習是：第2部分，第3部分和第4部分。</p>
+<p>Time for some fake graphics! Let’s say we want to draw game boards that look like this:</p>
+<p>--- --- ---<br/>| | | |<br/>--- --- ---<br/>| | | |<br/>--- --- ---<br/>| | | |<br/>--- --- ---<br/>This one is 3x3 (like in tic tac toe). Obviously, they come in many other sizes (8x8 for chess, 19x19 for Go, and many more).</p>
+<p>是時候購買一些假圖形了！ 假設我們要繪製如下游戲板：</p>
+<p>---<br/>| | | |<br/>---<br/>| | | |<br/>---<br/>| | | |<br/>---<br/>這是3x3（就像井字遊戲一樣）。 顯然，它們有許多其他尺寸（國際象棋為8x8，圍棋為19x19等）。</p>
+<p>Ask the user what size game board they want to draw, and draw it for them to the screen using Python’s print statement.</p>
+<p>詢問用戶他們想繪製什麼尺寸的遊戲板，並使用Python的print語句將其繪製到屏幕上。</p>
+<p>Remember that in Python 3, printing to the screen is accomplished by</p>
+<p>print("Thing to show on screen")<br/>Hint: this requires some use of functions, as were discussed previously on this blog and elsewhere on the Internet, like this TutorialsPoint link.</p>
+<p>請記住，在Python 3中，打印到屏幕是通過以下方式完成的：</p>
+<p>打印（“顯示在屏幕上的東西”）<br/>提示：這需要某種功能的使用，如本博客之前和Internet上其他地方所討論的，例如TutorialsPoint鏈接。</p>
+<p></p>
+<p></p>
+<p></p>
+<p>Sample solution<br/>Let’s break this task into pieces and use Python 3.</p>
+<p><span>範例</span>解答<br/>讓我們將這項任務分解為幾部分，並使用Python 3。</p>
+<p>First, the user needs to a numbers that represent the size of the game board (assuming the game board will be n by n). (Bonus exercise: extend the following code to make the game board not square.). The following snippet assumes that the person entered a number and doesn’t do any kind of error checking - for now, that’s OK.</p>
+<p>首先，用戶需要一個代表遊戲板尺寸的數字（假設遊戲板為n×n）。 （獎勵練習：擴展以下代碼以使遊戲板不方形。）。以下代碼段假設此人輸入了一個數字，並且未進行任何類型的錯誤檢查-暫時可以。</p>
+<p>board_size = int(input("What size of game board? "))</p>
+<p>Then, we need to draw each row of the game board. Each row consists of horizontal pieces (---) and vertical pieces (|). Each of these shows up in a pattern, so we can rely on for loops to help with the rendering.</p>
+<p>然後，我們需要繪製遊戲板的每一行。每行由水平塊（-）和垂直塊（|）組成。每一個都以一種模式顯示，因此我們可以依靠for循環來幫助進行渲染。</p>
+<p>To print a single row, we want to do something like this:</p>
+<p>要打印一行，我們想做這樣的事情：</p>
+<p>print(" --- " * board_size)</p>
+<p><br/>To print the vertical parts of the row, we want something like this, because we don’t care about trailing whitespace, and because we want one more vertical line than the size of the board:</p>
+<p>要打印行的垂直部分，我們需要這樣的東西，因為我們不在乎尾隨空格，並且因為我們想要的垂直線比板子的尺寸還要多：</p>
+<p>print("| " * (board_size + 1))</p>
+<p>For a board of size board_size we want to print that many horizontal pieces and vertical pieces, plus an extra horizontal piece for the bottom. Let’s use functions for this entire operation, since we might want to change the style on the game boards for later use. All together, the program will look like this:</p>
+<p>對於大小為board_size的板子，我們要打印許多水平件和垂直件，並在底部再增加一個水平件。讓我們在整個操作過程中使用各種功能，因為我們可能想更改遊戲板上的樣式以備後用。總之，該程序將如下所示：</p>
+<p>def print_horiz_line():<br/>print(" --- " * board_size)</p>
+<p>def print_vert_line():<br/>print("| " * (board_size + 1))</p>
+<p>if __name__ == "__main__":<br/>board_size = int(input("What size of game board? "))</p>
+<p>for index in range(board_size):<br/>print_horiz_line()<br/>print_vert_line()<br/>print horiz_line()</p>
+<p><br/>This way, if we ever decide to change the design of the game board by making it bigger, it will be easy to do! All we need to do is change the print_horiz_line() and print_vert_line() functions, and we’re all set!</p>
+<p>這樣，如果我們決定通過擴大遊戲板的設計來改變它的設計，那將很容易做到！我們需要做的就是更改print_horiz_line（）和print_vert_line（）函數，我們都準備好了！</p>
+<p></p>
+<p>A few user solutions not using functions<br/>This one is pretty simple, and it is specific to the 3x3 board above. There is no way to change the size. Additionally, writing out the a and b lists in the print statement are tedious and can be improved with a list comprehension or for loop.</p>
+<p>一些不能作用功能的解決方案<br/>這很簡單，它特定於上面的3x3板。 無法更改大小。 此外，在print語句中寫出a和b列表很繁瑣，可以通過列表理解或for循環加以改進。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">a = '---'.join(' ')
+b = ' '.join('||||')
+print('\n'.join((a, b, a, b, a, b, a)))</pre>
+<p>The author chose to use a while loop instead of a for loop to do the printing, which was an interesting choice. But it works!<br/>作者選擇使用while循環而不是for循環進行打印，這是一個有趣的選擇。 但這有效！</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def drawboard(kamal):
+    kamal = int(kamal)
+    i = 0
+    ho = "--- "
+    ve = "|   "
+    ho = ho * kamal
+    ve = ve * (kamal+1)
+    while i &lt; kamal+1:
+        print ho
+        if not (i == kamal):
+            print ve
+        i += 1</pre>
+<p></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p></p>
 <h2>25</h2>
+<p>Exercise 25 Guessing Game Two</p>
+<p>In<span> </span><a href="https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html">a previous exercise</a>, we’ve written a program that “knows” a number and asks a user to guess it.</p>
+<p>This time, we’re going to do exactly the opposite. You, the user, will have in your head a number between 0 and 100. The program will guess a number, and you, the user, will say whether it is too high, too low, or your number.</p>
+<p>At the end of this exchange, your program should print out how many guesses it took to get your number.</p>
+<p>As the writer of this program, you will have to choose how your program will strategically guess. A naive strategy can be to simply start the guessing at 1, and keep going (2, 3, 4, etc.) until you hit the number. But that’s not an optimal guessing strategy. An alternate strategy might be to guess 50 (right in the middle of the range), and then increase / decrease by 1 as needed. After you’ve written the program, try to find the optimal strategy! (We’ll talk about what is the optimal one next week with the solution.)</p>
+<p><span>在上</span><a href="https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html"><span>一個練習中</span></a><span>，我們編寫了一個程序，該程序“知道”一個數字並要求用戶猜測它。</span></p>
+<p><span><span>這次，我們將做相反的事情。</span><span>您（用戶）的腦海中會有一個介於0到100之間的數字。程序將猜測一個數字，而您（用戶）將說出它是太高，太低還是您的數字。</span></span></p>
+<p><span><span>交換結束後，您的程序應打印出獲得號碼所需的猜測次數。</span></span></p>
+<p><span><span>作為該程序的作者，您將不得不選擇您的程序將如何進行戰略性猜測。</span><span>幼稚的策略可以是簡單地從1開始猜測，並繼續進行（2、3、4等），直到您得出數字為止。</span><span>但這不是最佳的猜測策略。</span><span>另一種策略是猜測50（在範圍的中間），然後根據需要增加/減少1。</span><span>編寫完程序後，嘗試找到最佳策略！</span><span>（我們將在下週討論該解決方案的最佳選擇。）</span></span></p>
+<p><span><span></span></span></p>
+<p><span><span>Topics and links for more information</span></span></p>
+<p>(<span>更多資訊於連結和主題)</span></p>
+<p>This exercise doesn’t need any functions, but it does need extensive use of variables, math, and user input.</p>
+<p>You can refer to<span> </span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html">this exercise on user input</a>,<span> </span><a href="https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html">this one on rock paper scissors</a>, and many others.</p>
+<p>If you want to implement the optimal solution without thinking about it first, you can read this<span> </span><a href="https://en.wikipedia.org/wiki/Binary_search_algorithm">Wikipedia article on binary search</a>.</p>
+<p><span>該練習不需要任何功能，但確實需要大量使用變量，數學和用戶輸入。</span></p>
+<p><span><span>您可以</span></span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span><span>在用戶輸入上</span></span></a><span><span>參考</span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span>此練習</span></a><span>，</span></span><a href="https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html"><span><span>在石頭剪刀</span></span></a><span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span>上</span></a><span>參考</span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span>此練習</span></a><span>，以及其他許多參考。</span></span></p>
+<p><span><span>如果您想在不首先考慮的情況下實施最佳解決方案，則可以閱讀</span></span><a href="https://en.wikipedia.org/wiki/Binary_search_algorithm"><span><span>有關二進制搜索的Wikipedia文章</span></span></a><span><span>。</span></span></p>
+<p><span><span></span></span></p>
+<p>Happy coding!</p>
+<p>編碼愉快!</p>
+<p></p>
+<p></p>
+<p></p>
+<p>Sample solution<br/>One user implemented an interesting strategy. Based on whether the number was lower or higher than the guess, randomly pick a number in that direction. This code is easy to read, even if it does not achieve the most efficient solution (and depends a little bit on randomness).</p>
+<p><span>範例</span>解答<br/>一個用戶實施了一種有趣的策略。 根據數字是低於還是高於猜測，隨機選擇該方向上的數字。 即使沒有實現最有效的解決方案（並且在某種程度上取決於隨機性），該代碼也易於閱讀。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
+In a previous exercise, we've written a program that 'knows' a number and asks a user to guess it.
+This time, we're going to do exactly the opposite.
+You, the user, will have in your head a number between 0 and 100.
+The program will guess a number, and you, the user, will say whether it is too high, too low, or your number.
+ 
+At the end of this exchange, your program should print out how many guesses it took to get your number.
+ 
+As the writer of this program, you will have to choose how your program will strategically guess.
+A naive strategy can be to simply start the guessing at 1, and keep going (2, 3, 4, etc.) until you hit the number.
+But that's not an optimal guessing strategy.
+An alternate strategy might be to guess 50 (right in the middle of the range), and then increase / decrease by 1 as needed.
+After you've written the program, try to find the optimal strategy! (We'll talk about what is the optimal one next week with the solution.)
+'''
+ 
+import random
+ 
+# Awroken
+ 
+MINIMUM = 0
+MAXIMUM = 100
+NUMBER = random.randint(MINIMUM, MAXIMUM)
+TRY = 0
+RUNNING = True
+ANSWER = None
+ 
+while RUNNING:
+    print "Is it %s?" % str(NUMBER)
+    ANSWER = raw_input()
+    if "no" in ANSWER.lower() and "lower" in ANSWER.lower():
+        NUMBER -= random.randint(1, 4)
+    elif "no" in ANSWER.lower() and "higher" in ANSWER.lower():
+        NUMBER += random.randint(1, 4)
+    elif ANSWER.lower() == "no":
+        print "Higher or lower?"
+        ANSWER = raw_input()
+        if ANSWER.lower() == "higher":
+            NUMBER += random.randint(1, 4)
+        elif ANSWER.lower() == "lower":
+            NUMBER -= random.randint(1, 4)
+    elif ANSWER.lower() == "yes":
+        if TRY &lt; 2:
+            print "Yes! It only took me %s try!" % str(TRY)
+        elif TRY &lt; 2 and TRY &lt; 10:
+            print "Pretty well for a robot, %s tries." % str(TRY)
+        else:
+            print "That's so bad, %s tries." % str(TRY)
+        RUNNING = False
+    TRY += 1
+     
+print "Thanks for the game!"</pre>
+<p></p>
+<pre>Here is one user solution, implementing binary search:<br/>這是一個實現二進制搜索的用戶解決方案：</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def guess():
+    i = 0
+    # i is the lowest number in range of possible guess
+    j = 100
+    # j is the highest number in range of possible guesses
+    m = 50
+    # m is the middle number in range of possible guesses
+    counter = 1
+    # counter is the number of guesses take.
+    print "Please guess a number"
+    condition = input("Is your guess " + str(m) + "? (0 means it's too low, 1 means it's your guess and 2 means it's too high) ")
+    while condition != 1:
+        counter += 1
+        if condition == 0:
+            i = m + 1
+        elif condition == 2:
+            j = m - 1
+        m = (i + j) / 2
+        condition = input("Is your guess " + str(m) + "? (0 means it's too low, 1 means it's your guess and 2 means it's too high) ")
+    print "It took" , counter , "times to guess your number"
+guess()
+</pre>
+<p></p>
+<pre>Explanation<br/>說明<br/><br/>Theory<br/>The problem given in this exercise is called a search problem - the objective is to find something. <br/>It is solved by an algorithm called a search algorithm - an algorithm designed to find something. Not rocket science, I know, just terminology.<br/>理論<br/>在本練習中給出的問題稱為搜索問題-目的是找到一些東西。 它可以通過稱為搜索算法的算法來解決，該算法旨在查找某些內容。 我知道，不是火箭科學，只是術語。<br/><br/>The most optimal solution to this problem requires an algorithm called binary search, the most efficient search algorithm on sorted lists <br/>(for those who know about computational complexity, binary search is an O(log n) algorithm).<br/>解決此問題的最佳方法需要一種稱為二進制搜索的算法，這是排序列表上最有效的搜索算法（對於那些了解計算複雜性的人，二進制搜索是O（log n）算法）。<br/><br/>In a nutshell, binary search picks an element from a sorted list, then decides (based on some feedback of the target), whether to look earlier or later in the list. <br/>In the optimal form, the binary search algorithm will always look at the “center” of the list in question. <br/>The catch is that binary search relies on having the original list in question be sorted, or ordered either smallest to largest or largest to smallest.<br/>簡而言之，二進制搜索從排序列表中選擇一個要素或數值，然後（基於目標的一些反饋）確定是在列表中查找更早還是稍後。 在最佳形式下，二進制搜索算法將始終查看所關注列表的“中心”。 <br/>問題是二進制搜索依賴於對原始列表進行排序，或者按最小到最大或最大到最小的順序排序。<br/><br/>Example + Code<br/>Let’s go through an example. Say you have this list: my_list = [-10, 1, 2, 6, 7, 12, 21], and we are trying to find the element 12 in the smallest number of steps. <br/>This means we want to search through the list until we find 8, and keep track of the index we look at. The binary search algorithm will start by looking at the item in the middle (in this case 6).<br/> We then task, is 6 less than or greater than our target (12)? It is less, so we need to look at the RIGHT HALF of the list. This means our new list we are looking at is [7, 12, 21]. <br/>We again look at the “center” element (12), and compare. <br/>It is 12, our target, so we are done!<br/>示例+代碼<br/>讓我們來看一個例子。 假設您有以下列表：my_list = [-10、1、2、6、7、12、21]，我們正在嘗試以最少的步驟數查找元素12。 <br/>這意味著我們要在列表中進行搜索，直到找到8，然後繼續追蹤我們要查看的索引。 二進制搜索算法將首先查看中間的項目（在本例中為6）。 <br/>然後，我們要完成任務，是目標6小於還是大於目標12？ 它的數量較少，因此我們需要查看列表的一半。 這意味著我們正在查看的新列表為[7，12，21]。 <br/>我們再次查看“中心”元素（12）並進行比較。 我們的目標是12，所以我們完成了！<br/><br/>In code, we can accomplish this with a while loop. <br/>We want to keep going until either we haven’t found the element, or our guess is equal to the element. <br/>The end conditions are len(my_list) == 0 or guess == target, so the while loop continues while those two conditions are NOT met.<br/>在代碼中，我們可以使用while循環來完成此操作。 <br/>我們要繼續下去，直到找不到要素或猜測等於該要素為止。 結束條件是len（my_list）== 0或guess == target，因此，當不滿足這兩個條件時，while循環將繼續。<br/><br/></pre>
+<p>The function will look something like this (in Python 3), assuming the list is sorted from smallest to largest:</p>
+<p>該函數看起來像這樣（在Python 3中），假設列表從最小到最大排序：</p>
+<pre><code class="language-python" data-lang="python"><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">21</span><span class="p">]</span>
+<span class="n">target</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">guess</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">target</span><span class="p">):</span>
+  <span class="n">center_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="n">guess</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">center_index</span><span class="p">]</span>
+  <span class="k">if</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">target</span><span class="p">:</span>
+    <span class="n">my_list</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[:</span><span class="n">center_index</span><span class="p">]</span>
+  <span class="k">elif</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">target</span><span class="p">:</span>
+    <span class="n">my_list</span> <span class="o">=</span> <span class="n">my_list</span><span class="p">[</span><span class="n">center_index</span><span class="p">:]</span>
+
+<span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">target</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Found target! Guess = "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">guess</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Target not found. Last guess = "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">guess</span><span class="p">))</span></code></pre>
+<p>A few tricky things to note from the code:</p>
+<p>從代碼中註意一些棘手的事情：</p>
+<ul>
+<li>We want to always be looking at the “center” element of the list, but if the list (or sublist) has an even number of elements, it needs to be converted into an integer, so it can be used as an index into a list. In my case, I just converted the result of the length of the list divided by 2 into an int, but there are other ways.</li>
+<li>我們一直希望查看列表的“中心”元素，但是如果列表（或子列表）的元素數為偶數，則需要將其轉換為整數，因此可以將其用作索引。清單。就我而言，我只是將列表的長度除以2的結果轉換為一個int，但是還有其他方法。</li>
+<li>The variable<span> </span><code class="highlighter-rouge">guess</code><span> </span>has to be given a value to start, but it doesn’t matter what that value is as long as it is not equal to<span> </span><code class="highlighter-rouge">target</code>. (<em>Why? because if<span> </span><code class="highlighter-rouge">guess</code><span> </span>were to start out equal to<span> </span><code class="highlighter-rouge">target</code>, the loop will never happen.</em>)</li>
+<li>必須給變量猜測一個開始的值，但是只要該值不等於目標值，則沒有關係。 （為什麼？因為如果猜測始於目標，那麼循環將永遠不會發生。）</li>
+<li>I have two conditions in my<span> </span><code class="highlighter-rouge">if</code><span> </span>statement: if the<span> </span><code class="highlighter-rouge">guess</code><span> </span>is less than the<span> </span><code class="highlighter-rouge">target</code>, or if<span> </span><code class="highlighter-rouge">guess</code><span> </span>is greater than the<span> </span><code class="highlighter-rouge">target</code>. In the case of the<span> </span><code class="highlighter-rouge">guess</code><span> </span>being less than the<span> </span><code class="highlighter-rouge">target</code>, I want to look at the half of the list on the RIGHT side of the<span> </span><code class="highlighter-rouge">guess</code>. The way I wrote it here, I am including the<span> </span><code class="highlighter-rouge">guess</code><span> </span>element in the sublist - this is not hugely important, since we will most likely remove that element later in the process anyway.</li>
+<li>我的if語句有兩個條件：如果猜測小於目標，或者猜測大於目標。在猜測小於目標的情況下，我想查看猜測右邊的列表的一半。我在這裡編寫它的方式是，在子列表中包括了guess元素-這並不是很重要，因為無論如何我們很可能會在稍後的過程中刪除該要素。</li>
+<li>You can put a<span> </span><code class="highlighter-rouge">print(my_list)</code><span> </span>and/or a<span> </span><code class="highlighter-rouge">print(guess)</code><span> </span>inside the<span> </span><code class="highlighter-rouge">while</code><span> </span>loop after the<span> </span><code class="highlighter-rouge">if</code><span> </span>statement to see the progress of the code.</li>
+<li>您可以在if語句後的while循環中放置一個print（my_list）和/或一個print（guess），以查看代碼的進度。</li>
+</ul>
+<pre>Bonus code<br/>Lets way we wanted to add “monitoring” to our code. How many times did the while loop execute? Let’s just add a counter!<br/>加碼代碼<br/>讓我們想在代碼中添加“監視”。 while循環執行了多少次？ 讓我們添加一個計數器！<br/><br/>my_list = [-10, 1, 2, 6, 7, 12, 21]<br/>target = 12<br/>guess = 0<br/>numbet_of_loops = 0<br/>while not (len(my_list) == 1 or guess == target):<br/> center_index = int(len(my_list) / 2)<br/> guess = my_list[center_index]<br/> if guess &gt; target:<br/> my_list = my_list[:center_index]<br/> elif guess &lt; target:<br/> my_list = my_list[center_index:]<br/> number_of_loops += 1<br/><br/>if guess == target:<br/> print("Found target! Guess = " + str(guess))<br/>else:<br/> print("Target not found. Last guess = " + str(guess))<br/>print("while loop executed " + str(number_of_loops) + " times")<br/><br/>Try changing the value of target and see what happens!<br/>嘗試更改目標值，看看會發生什麼！<br/><br/>If you are feeling excited about this code and want to play more, try this bonus challenge:<br/> what happens if the list is sorted from largest to smallest? What has to change in the code?<br/>如果您對此代碼感到興奮並想玩更多遊戲，請嘗試以下額外挑戰：如果列表從最大到最小排序會怎樣？ 代碼中需要更改什麼？<br/><br/>Answering the original question<br/>So, to answer the original question, there are two things that need to be modified from our code snippet above:<br/>回答原始問題<br/>因此，要回答原始問題，需要從上面的代碼片段中修改兩件事：<br/>The target needs to be set. <br/>The problem specifically specifies asking the user for feedback about whether the number is too big or too small, so that needs to be incorporated into the while loop.<br/>The list is now not a random collection of numbers - it is all the numbers in range(0, 100), so you can either construct the list that way,<br/>or compute the guesses on the fly without the list (like in the sample solution above).<br/>There are many ways to solve this problem! Try a few of them and see what you like.<br/>需要設定目標。 該問題特別指定要求用戶提供有關該數字太大還是太小的反饋，因此需要將其合併到while循環中。<br/>現在，列表不是數字的隨機集合-它是range（0，100）中的所有數字，因此您可以以這種方式構造列表，也可以在沒有列表的情況下即時計算猜測值（例如在示例解決方案中） 以上）。<br/>解決這個問題有很多方法！ 嘗試其中的一些，看看自己喜歡什麼。</pre>
 <h2>26</h2>
 <h2>27</h2>
 <h2>28</h2>
